@@ -4,20 +4,20 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
     mode: 'development',
-    entry: 'src/index.js',
+    entry: './src/index.js',
     output: {
-        file: './bundle.js',
+        filename: './bundle.js',
         path: path.join(__dirname, '/public')
     },
     devServer: {
         contentBase: './public',
         port: 8080,
-        open: false,
+        open: false
     },
     resolve: {
         extensions: ['.js', '.jsx', '.json']
     },
-    extensions: [
+    plugins: [
         new MiniCssExtractPlugin({
             filename: './style.css'
         })
