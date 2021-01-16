@@ -10,22 +10,24 @@ body {
 
     display: grid;
     grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: 1fr calc(100vw - 15vw) 1fr;
+    grid-template-columns: 1fr calc(100vw - 6rem) 1fr;
     grid-template-areas:
-        "one two three"
-        "four title six"
-        "seven title nine"
-        "ten eleven twelve";
+        "none1 none1 profile"
+        "work title profile"
+        "work title contact"
+        "none2 none2 contact";
 
     transition: transform 1s ease;
 }
 
-.title  { grid-area: title  }
+.title   { grid-area: title   }
+.work    { grid-area: work    }
+.profile { grid-area: profile }
+.contact { grid-area: contact }
 
-.one   { grid-area: one   }
-.two   { grid-area: two   }
-.three { grid-area: three }
-.four  { grid-area: four  }
-.six   { grid-area: six   }
-.seven { grid-area: seven }
-.nine  { grid-area: nine  }
+.profile, .contact {
+    margin-left: 3rem;
+}
+
+.none1   { grid-area: none1   }
+.none2   { grid-area: none2   }

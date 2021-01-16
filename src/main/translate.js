@@ -1,19 +1,25 @@
-export default function(movecoordinateoint) {
-    let coordinate = { width: 0, height: 0 }
+export default function(movepoint) {
+    let width, height
 
-    switch(movecoordinateoint) {
-        case 'one':
-            coordinate.width, coordinate.height = 0, 0
-            break
+    switch(movepoint) {
         case 'title':
-            coordinate.width, coordinate.height = 100, 50
+            [width, height] = [100, 50]
+            break
+        case 'work':
+            [width, height] = [0, 50]
+            break
+        case 'profile':
+            [width, height] = [200, 0]
+            break
+        case 'contact':
+            [width, height] = [200, 100]
             break
         default:
-            coordinate.width, coordinate.height = 100, 50
+            [width, height] = [100, 50]
     }
 
     const main = document.querySelector('.main')
-    main.setAttribute('style', `transform: translate(-${coordinate.width}, -${coordinate.height})`)
+    main.setAttribute('style', `transform: translate(-${width}vw, -${height}vh)`)
 
     // not func
     // main.style.transform = `translate(-${coordinate.width}, -${coordinate.height})`
