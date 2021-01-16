@@ -1,29 +1,33 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import './app.css'
-import translate from './translate'
 
+import MoveBtn from '../components/button/translateBtn'
 import WorkSlime from '../components/slimeshape/work'
 
 export default props => {
     return (
         <div className="main">
             <div className="title">
-                <button onClick={ () => translate('work') }>work</button>
-                <button onClick={ () => translate('profile') }>profile</button>
-                <button onClick={ () => translate('contact') }>contact</button>
+                <MoveBtn move='work'>move to work</MoveBtn>
+                <MoveBtn move='profile'>profile</MoveBtn>
+                <MoveBtn move='contact'>contact</MoveBtn>
             </div>
 
-            <div className="work">
-                <button onClick={ () => translate('title') }>title</button>
-                <WorkSlime></WorkSlime>
+            <div className="work" style={{display: 'flex'}}>
+                <MoveBtn move='title' style={{
+                    // display: 'none',
+                    // zIndex: '-200',
+                }}>title</MoveBtn>
+
+                <WorkSlime width="140vw" height="125vh"></WorkSlime>
             </div>
 
             <div className="profile">
-                <button onClick={ () => translate('title') }>title</button>
+                <MoveBtn move='title'>title</MoveBtn>
             </div>
 
             <div className="contact">
-                <button onClick={ () => translate('title') }>title</button>
+                <MoveBtn move='title'>title</MoveBtn>
             </div>
 
             <div className="none1">none1</div>
