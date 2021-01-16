@@ -2,6 +2,8 @@ import React, { Fragment } from 'react'
 import './app.css'
 import translate from './translate'
 
+import WorkSlime from '../components/slimeshape/work'
+
 export default props => {
     return (
         <div className="main">
@@ -13,6 +15,7 @@ export default props => {
 
             <div className="work">
                 <button onClick={ () => translate('title') }>title</button>
+                <WorkSlime></WorkSlime>
             </div>
 
             <div className="profile">
