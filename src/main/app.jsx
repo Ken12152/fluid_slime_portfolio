@@ -13,7 +13,7 @@ export default props => {
                 <MoveBtn move='contact'>contact</MoveBtn>
             </div>
 
-            <div className="work" style={{display: 'flex'}}>
+            <div className="work">
                 <MoveBtn move='title' style={{
                     // display: 'none',
                     // zIndex: '-200',
