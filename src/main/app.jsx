@@ -3,7 +3,7 @@ import './app.css'
 
 import MoveBtn from '../components/button/translateBtn'
 import LeftSlime from '../components/slimeshape/leftSlime'
-import Profile from '../profile/profile'
+import Profile from '../components/profile/profile'
 import translate from '../components/button/translate'
 
 export default props => {

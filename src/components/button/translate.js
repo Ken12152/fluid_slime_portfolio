@@ -1,22 +1,18 @@
-export default function(movepoint) {
-    let width, height
+export default function(gridAreaName) {
 
-    switch(movepoint) {
-        case 'title':
-            [width, height] = [100, 50]
-            break
-        case 'profile':
-            [width, height] = [0, 50]
-            break
-        case 'work':
-            [width, height] = [200, 0]
-            break
-        case 'contact':
-            [width, height] = [200, 100]
-            break
-        default:
-            [width, height] = [100, 50]
+    const coordinate = {
+        title:   [100,  50],
+        profile: [  0,  50],
+        work:    [200,   0],
+        contact: [200, 100],
     }
+
+    const [width, height] = coordinate.hasOwnProperty(gridAreaName) ?
+        coordinate[gridAreaName] : coordinate['title']
+
+    // is also ok ~ 
+    // const [width, height] = gridAreaName in coordinate ?
+    //     coordinate[gridAreaName] : coordinate['title']
 
     const main = document.querySelector('.main')
     main.setAttribute('style', `transform: translate(-${width}vw, -${height}vh)`)

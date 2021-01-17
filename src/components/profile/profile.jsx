@@ -1,10 +1,12 @@
 import React from 'react'
 import './profile.css'
+import LoremIpsum from '../text/genLoremIpsum'
 
 export default props => {
+
     return (
         <div className="profile-container">
-            {Array(5).fill(0).map((_, i) => <p key={i}>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>)}
+            <LoremIpsum times="5"></LoremIpsum>
         </div>
     )
 }
