@@ -1,5 +1,9 @@
-body {
+* {
     margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
     background-color: #EAE9E5;
 }
 
@@ -10,39 +14,32 @@ body {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr calc(100vw - 8rem) 1fr;
-    /* grid-template-areas:
-        "none1 none1 profile"
-        "work title profile"
-        "work title contact"
-        "none2 none2 contact"; */
+    grid-template-areas:
+        "none1 none1 work"
+        "profile title work"
+        "profile title contact"
+        "none2 none2 contact";
 
     transform: translate(-100vw, -50vh);
-    transition: transform 2s ease;
+    transition: transform 0.3s ease;
 
     position: fixed;
 }
 
-.profile, .contact {
-    margin-left: 4rem;
-}
-
-.work { 
-    /* grid-area: work; */
-    grid-column: 1;
-    grid-row: 2 / span 2;
-
+.profile { 
+    grid-area: profile;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-.title { grid-column: 2; grid-row: 2 /span 2;}
-.profile { grid-column: 3; grid-row: 1 /span 2;}
-.contact { grid-column: 3; grid-row: 3 /span 2;}
+.work, .contact {
+    margin-left: 4rem;
+}
 
-/* .title   { grid-area: title   }
-.profile { grid-area: profile }
+.title   { grid-area: title   }
 .contact { grid-area: contact }
 
 .none1   { grid-area: none1   }
-.none2   { grid-area: none2   } */
+.none2   { grid-area: none2   }

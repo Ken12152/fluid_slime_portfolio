@@ -5,10 +5,10 @@ export default function(movepoint) {
         case 'title':
             [width, height] = [100, 50]
             break
-        case 'work':
+        case 'profile':
             [width, height] = [0, 50]
             break
-        case 'profile':
+        case 'work':
             [width, height] = [200, 0]
             break
         case 'contact':
