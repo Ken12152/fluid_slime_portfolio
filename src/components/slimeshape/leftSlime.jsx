@@ -3,7 +3,7 @@ import SlimeAnimation from './slimeAnimation'
 
 export default props => (
     <SlimeAnimation 
-        width={props.width} height={props.height}
+        width={props.width} height={props.height} style={props.style}
 
         dur="10s" id="slime-profile" viewBox="0 0 634.33 703.22" values="
             M105.74,79.59c131.91-116.91,374.05-91.53,415-6c40.28,84.12-131.75,189.49-93,321

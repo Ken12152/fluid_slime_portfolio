@@ -15,7 +15,7 @@ export default props => {
     }
 
     return (
-        <div style={containerStyle}>
+        <div style={{ ...containerStyle, ...props.style }}>
             <svg id={props.id} viewBox={props.viewBox} version="1.1" xmlns="http://www.w3.org/2000/svg"
                 style={svgStyle} preserveAspectRatio="none">
                 <path>

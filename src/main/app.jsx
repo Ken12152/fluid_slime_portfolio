@@ -1,13 +1,16 @@
 import React, { useEffect } from 'react'
 import './app.css'
 
+import translate from '../components/button/translate'
+
 import MoveBtn from '../components/button/translateBtn'
 import LeftSlime from '../components/slimeshape/leftSlime'
 import Profile from '../components/profile/profile'
-import translate from '../components/button/translate'
+import MoveDiv from '../components/button/moveAreaDiv'
+
 
 export default props => {
-    const initPos = 'profile'
+    const initPos = 'title'
     useEffect(() => translate(initPos), [])
 
     return (
@@ -16,6 +19,10 @@ export default props => {
                 <MoveBtn move='profile'>left</MoveBtn>
                 <MoveBtn move='work'>topRight</MoveBtn>
                 <MoveBtn move='contact'>bottomRight</MoveBtn>
+
+                <MoveDiv area="profile" top="44vh" left="-7rem" rotate="-90" >
+                    Profile
+                </MoveDiv>
             </div>
 
             <div className="profile">
@@ -23,7 +30,12 @@ export default props => {
 
                 <Profile></Profile>
 
-                <LeftSlime width="140vw" height="125vh" opacity="0.5"></LeftSlime>
+                <LeftSlime width="140vw" height="125vh" style={{
+                    fill: '#e8a2a0',
+                    // zIndex: '-2',
+                    // backgroundColor: 'gray',
+                    // opacity: '0.5',
+                }}></LeftSlime>
             </div>
 
             <div className="work">

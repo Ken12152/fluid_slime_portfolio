@@ -1,0 +1,13 @@
+.move-area-btn {
+    padding: 0.5rem 3rem;
+    font-size: 1.3rem;
+
+    position: absolute;
+    z-index: 10;
+}
+
+.move-area-btn:hover {
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease-out;
+}

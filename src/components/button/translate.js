@@ -7,12 +7,10 @@ export default function(gridAreaName) {
         contact: [200, 100],
     }
 
-    const [width, height] = coordinate.hasOwnProperty(gridAreaName) ?
-        coordinate[gridAreaName] : coordinate['title']
+    const [width, height] = coordinate[(gridAreaName in coordinate) ? gridAreaName : 'title']
 
     // is also ok ~ 
-    // const [width, height] = gridAreaName in coordinate ?
-    //     coordinate[gridAreaName] : coordinate['title']
+    // const [width, height] = coordinate[(coordinate.hasOwnProperty(gridAreaName)) ? gridAreaName : 'title']
 
     const main = document.querySelector('.main')
     main.setAttribute('style', `transform: translate(-${width}vw, -${height}vh)`)
