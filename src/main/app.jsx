@@ -8,30 +8,30 @@ import LeftSlime from '../components/slimeshape/leftSlime'
 import Profile from '../components/profile/profile'
 import MoveDiv from '../components/button/moveAreaDiv'
 
+import moveSlime from '../components/slimeshape/moveSlime'
 
 export default props => {
-    const initPos = 'title'
+    const initPos = 'profile'
     useEffect(() => translate(initPos), [])
 
     return (
         <div className="main">
             <div className="title">
-                <MoveBtn move='profile'>left</MoveBtn>
-                <MoveBtn move='work'>topRight</MoveBtn>
-                <MoveBtn move='contact'>bottomRight</MoveBtn>
-
-                <MoveDiv area="profile" top="44vh" left="-7rem" rotate="-90" >
-                    Profile
-                </MoveDiv>
+                <MoveDiv area="profile" top="44vh" left="-6.0rem" rotate="-90" >Profile</MoveDiv>
+                <MoveDiv area="work" top="14vh" right="-6.0rem" rotate="90">Work</MoveDiv>
+                <MoveDiv area="contact" bottom="17vh" right="-6.0rem" rotate="90">Contact</MoveDiv>
             </div>
 
             <div className="profile">
-                <MoveBtn move='title' style={{ zIndex: '100', position: 'absolute', top: '-0vh', left: '0vw'}}>move to title</MoveBtn>
+                <MoveDiv top="1vh" right="0rem" width="9rem" rotate="0"
+                    area="title" hover={1}
+                >Back</MoveDiv>
 
                 <Profile></Profile>
 
                 <LeftSlime width="140vw" height="125vh" style={{
                     fill: '#e8a2a0',
+                    transform: 'rotate(180deg)',
                     // zIndex: '-2',
                     // backgroundColor: 'gray',
                     // opacity: '0.5',
@@ -39,11 +39,11 @@ export default props => {
             </div>
 
             <div className="work">
-                <MoveBtn move='title'>move to title</MoveBtn>
+                <MoveDiv area="title" top="1vh" left="0rem" width="8rem" rotate="0">Back</MoveDiv>
             </div>
 
             <div className="contact">
-                <MoveBtn move='title'>move to title</MoveBtn>
+                <MoveDiv area="title" top="1vh" left="0rem" width="8rem" rotate="0">Back</MoveDiv>
             </div>
 
             <div className="none1">none1</div>

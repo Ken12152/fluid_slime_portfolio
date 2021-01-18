@@ -26,25 +26,36 @@ body {
     position: fixed;
 }
 
-.work, 
-.contact {
-    margin-left: 3rem;
+.title { 
+    grid-area: title;
 }
 
 .profile { 
     grid-area: profile;
+    margin-right: 3rem;
+
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.work { 
+    grid-area: work;
+
+}
+
+.contact { 
+    grid-area: contact
+}
+
+.title, .work,
+.profile, .contact {
     position: relative;
 }
 
-.title { 
-    grid-area: title;
-    position: relative;
+.work, .contact {
+    margin-left: 3rem;
 }
 
-.contact { grid-area: contact }
-
-.none1   { grid-area: none1   }
-.none2   { grid-area: none2   }
+.none1 { grid-area: none1 }
+.none2 { grid-area: none2 }

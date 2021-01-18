@@ -1,5 +1,7 @@
 .move-area-btn {
-    padding: 0.5rem 3rem;
+    width: 10rem;
+    padding: 1rem 0rem;
+    text-align: center;
     font-size: 1.3rem;
 
     position: absolute;

@@ -5,6 +5,7 @@ import translate from './translate'
 
 export default props => {
     const style = {
+        width: `${props.width}`,
         top: `${props.top}`,
         bottom: `${props.bottom}`,
         left: `${props.left}`,
