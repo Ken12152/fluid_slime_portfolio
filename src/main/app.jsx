@@ -12,6 +12,10 @@ import MoveDiv from '../components/button/moveAreaDiv'
 
 import { highlightSlime, lowlightSlime } from '../components/slimeshape/highlightSlimeAnimation'
 
+/** 
+ * before Refactoring 
+*/
+
 export default props => {
     const initPos = 'title'
     useEffect(() => translate(initPos), [])
