@@ -1,0 +1,25 @@
+/* slime container */
+.slime-container {
+    transform: translate(0, 0);
+    transition: transform 0.5s ease;
+}
+
+#profile-slime-container.slime-highlight {
+    transform: translate(10vw, 0);
+}
+
+
+/* slime */
+.slime {
+    transition: all 0.7s ease;
+}
+
+#profile-slime {
+    transform: rotate(180deg);
+    fill: #e8a2a0;
+}
+
+#profile-slime.slime-highlight {
+    fill: rgb(204, 33, 33);
+    opacity: 0.7;
+}

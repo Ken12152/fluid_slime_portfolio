@@ -3,9 +3,10 @@ import './profile.css'
 import LoremIpsum from '../text/genLoremIpsum'
 
 export default props => {
+    const times = 8
     return (
         <div className="profile-container">
-            <LoremIpsum times="5"></LoremIpsum>
+            <LoremIpsum times={times}></LoremIpsum>
         </div>
     )
 }

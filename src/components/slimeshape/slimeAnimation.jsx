@@ -1,4 +1,5 @@
 import React from 'react'
+import './highlightSlimeAnimation.css'
 
 export default props => {
     const svgStyle = {
@@ -15,9 +16,10 @@ export default props => {
     }
 
     return (
-        <div id={`${props.id}-container`} style={{ ...containerStyle, ...props.style }}>
-            <svg id={props.id} viewBox={props.viewBox} version="1.1" xmlns="http://www.w3.org/2000/svg"
-                style={svgStyle} preserveAspectRatio="none">
+        <div id={props.containerId} className="slime-container" style={{ ...containerStyle, ...props.style }}>
+            <svg id={props.slimeId} className="slime" style={svgStyle} 
+                viewBox={props.viewBox} preserveAspectRatio="none"
+                version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <path>
                     <animate values={props.values}
                         dur={props.dur ? props.dur : "10s"} repeatCount="indefinite" attributeName="d"

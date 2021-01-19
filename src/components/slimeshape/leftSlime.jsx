@@ -2,10 +2,10 @@ import React from 'react'
 import SlimeAnimation from './slimeAnimation'
 
 export default props => (
-    <SlimeAnimation 
+    <SlimeAnimation containerId="profile-slime-container"
         width={props.width} height={props.height} style={props.style}
 
-        dur="10s" id="slime-profile" viewBox="0 0 634.33 703.22" values="
+        dur="3s" slimeId="profile-slime" viewBox="0 0 634.33 703.22" values="
             M105.74,79.59c131.91-116.91,374.05-91.53,415-6c40.28,84.12-131.75,189.49-93,321
             c35.66,121.03,210.49,130.64,206,187c-5.8,72.81-308.74,198.14-495,57C-28.55,511.83-44.96,213.15,105.74,79.59z;
 

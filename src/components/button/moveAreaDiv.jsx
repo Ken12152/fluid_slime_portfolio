@@ -14,8 +14,8 @@ export default props => {
     }
 
     return (
-        <div onClick={ () => translate(props.area) }
-            className="move-area-btn" style={style}
+        <div onMouseEnter={props.onMouseEnter} onMouseLeave={props.onMouseLeave}
+            onClick={ () => translate(props.area) } className="move-area-btn" style={style} 
         >{props.children}</div>
     )
 }

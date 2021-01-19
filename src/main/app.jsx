@@ -8,16 +8,19 @@ import LeftSlime from '../components/slimeshape/leftSlime'
 import Profile from '../components/profile/profile'
 import MoveDiv from '../components/button/moveAreaDiv'
 
-import moveSlime from '../components/slimeshape/moveSlime'
+import { highlightSlime, lowlightSlime } from '../components/slimeshape/highlightSlimeAnimation'
 
 export default props => {
-    const initPos = 'profile'
+    const initPos = 'title'
     useEffect(() => translate(initPos), [])
 
     return (
         <div className="main">
             <div className="title">
-                <MoveDiv area="profile" top="44vh" left="-6.0rem" rotate="-90" >Profile</MoveDiv>
+                <MoveDiv area="profile" top="44vh" left="-6.0rem" rotate="-90"
+                    onMouseEnter={ () => highlightSlime('profile-slime') } 
+                    onMouseLeave={ () => lowlightSlime('profile-slime') }
+                >Profile</MoveDiv>
                 <MoveDiv area="work" top="14vh" right="-6.0rem" rotate="90">Work</MoveDiv>
                 <MoveDiv area="contact" bottom="17vh" right="-6.0rem" rotate="90">Contact</MoveDiv>
             </div>
@@ -29,12 +32,7 @@ export default props => {
 
                 <Profile></Profile>
 
-                <LeftSlime width="140vw" height="125vh" style={{
-                    fill: '#e8a2a0',
-                    transform: 'rotate(180deg)',
-                    // zIndex: '-2',
-                    // backgroundColor: 'gray',
-                    // opacity: '0.5',
+                <LeftSlime width="140vw" height="125vh" style={{ 
                 }}></LeftSlime>
             </div>
 
