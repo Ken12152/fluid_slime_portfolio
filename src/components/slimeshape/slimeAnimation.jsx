@@ -16,10 +16,13 @@ export default props => {
     }
 
     return (
-        <div id={props.containerId} className="slime-container" style={{ ...containerStyle, ...props.style }}>
+        <div id={props.containerId} className="slime-container" 
+            style={{ ...containerStyle, ...props.style }}>
+
             <svg id={props.slimeId} className="slime" style={svgStyle} 
                 viewBox={props.viewBox} preserveAspectRatio="none"
                 version="1.1" xmlns="http://www.w3.org/2000/svg">
+
                 <path>
                     <animate values={props.values}
                         dur={props.dur ? props.dur : "10s"} repeatCount="indefinite" attributeName="d"

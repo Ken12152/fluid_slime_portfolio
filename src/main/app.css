@@ -33,15 +33,10 @@ body {
 .profile { 
     grid-area: profile;
     margin-right: 3rem;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .work { 
     grid-area: work;
-
 }
 
 .contact { 
@@ -50,6 +45,9 @@ body {
 
 .title, .work,
 .profile, .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 

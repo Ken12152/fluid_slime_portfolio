@@ -5,6 +5,8 @@ import translate from '../components/button/translate'
 
 import MoveBtn from '../components/button/translateBtn'
 import LeftSlime from '../components/slimeshape/leftSlime'
+import WorkSlime from '../components/slimeshape/workSlime'
+import ContactSlime from '../components/slimeshape/contactSlime'
 import Profile from '../components/profile/profile'
 import MoveDiv from '../components/button/moveAreaDiv'
 
@@ -21,8 +23,14 @@ export default props => {
                     onMouseEnter={ () => highlightSlime('profile-slime') } 
                     onMouseLeave={ () => lowlightSlime('profile-slime') }
                 >Profile</MoveDiv>
-                <MoveDiv area="work" top="14vh" right="-6.0rem" rotate="90">Work</MoveDiv>
-                <MoveDiv area="contact" bottom="17vh" right="-6.0rem" rotate="90">Contact</MoveDiv>
+                <MoveDiv area="work" top="14vh" right="-6.0rem" rotate="90"
+                    onMouseEnter={ () => highlightSlime('work-slime') } 
+                    onMouseLeave={ () => lowlightSlime('work-slime') }
+                >Work</MoveDiv>
+                <MoveDiv area="contact" bottom="17vh" right="-6.0rem" rotate="90"
+                    onMouseEnter={ () => highlightSlime('contact-slime') } 
+                    onMouseLeave={ () => lowlightSlime('contact-slime') }
+                >Contact</MoveDiv>
             </div>
 
             <div className="profile">
@@ -32,16 +40,17 @@ export default props => {
 
                 <Profile></Profile>
 
-                <LeftSlime width="140vw" height="125vh" style={{ 
-                }}></LeftSlime>
+                <LeftSlime width="140vw" height="125vh"></LeftSlime>
             </div>
 
             <div className="work">
                 <MoveDiv area="title" top="1vh" left="0rem" width="8rem" rotate="0">Back</MoveDiv>
+                <WorkSlime width="140vw" height="125vh"></WorkSlime>
             </div>
 
             <div className="contact">
                 <MoveDiv area="title" top="1vh" left="0rem" width="8rem" rotate="0">Back</MoveDiv>
+                <ContactSlime width="140vw" height="125vh"></ContactSlime>
             </div>
 
             <div className="none1">none1</div>
