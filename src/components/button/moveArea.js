@@ -1,5 +1,4 @@
-export default function(gridAreaName) {
-
+export default gridArea => {
     const coordinate = {
         title:   [100,  50],
         profile: [  0,  50],
@@ -7,14 +6,13 @@ export default function(gridAreaName) {
         contact: [200, 100],
     }
 
-    const [width, height] = coordinate[(gridAreaName in coordinate) ? gridAreaName : 'title']
-
     // is also ok ~ 
-    // const [width, height] = coordinate[(coordinate.hasOwnProperty(gridAreaName)) ? gridAreaName : 'title']
+    // const [width, height] = coordinate[(coordinate.hasOwnProperty(gridArea)) ? gridArea : 'title']
+    const [width, height] = coordinate[(gridArea in coordinate) ? gridArea : 'title']
 
-    const main = document.querySelector('.main')
+    const main = document.getElementById('main')
     main.setAttribute('style', `transform: translate(-${width}vw, -${height}vh)`)
 
-    // not func
+    // ainda testar se functiona
     // main.style.transform = `translate(-${coordinate.width}, -${coordinate.height})`
 }

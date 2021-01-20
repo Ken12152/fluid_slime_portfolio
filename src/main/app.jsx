@@ -1,60 +1,65 @@
 import React, { useEffect } from 'react'
 import './app.css'
 
-// import MoveBtn from '../components/button/translateBtn'
-import translate from '../components/button/translate'
-import MoveDiv from '../components/button/moveAreaDiv'
+/* func */
+import moveArea from '../components/button/moveArea'
+
+/* jsx component */
+// import _MoveAreaButton from '../components/button/_moveAreaButton'
+import MoveAreaButton from '../components/button/moveAreaButton'
 import { highlightSlime, lowlightSlime } from '../components/slimeshape/highlightSlimeAnimation'
 
-import LeftSlime from '../components/contents/profile/leftSlime'
-import WorkSlime from '../components/contents/work/workSlime'
-import ContactSlime from '../components/contents/contact/contactSlime'
-import Profile from '../components/contents/profile/profile'
+import LeftSlime from '../contents/profile/leftSlime'
+import WorkSlime from '../contents/work/workSlime'
+import ContactSlime from '../contents/contact/contactSlime'
+import Profile from '../contents/profile/profile'
 
 
 export default props => {
     const initPos = 'title'
-    useEffect(() => translate(initPos), [])
+    useEffect(() => moveArea(initPos), [])
 
     return (
-        <div className="main">
-            <div className="title">
-                <MoveDiv area="profile" top="44vh" left="-6.0rem" rotate="-90"
+        <div id="main">
+            <div id="title">
+                <MoveAreaButton label="Profile" area="profile" top="44vh" left="-6.0rem" rotate="-90"
                     onMouseEnter={ () => highlightSlime('profile-slime') } 
                     onMouseLeave={ () => lowlightSlime('profile-slime') }
-                >Profile</MoveDiv>
-                <MoveDiv area="work" top="14vh" right="-6.0rem" rotate="90"
+                ></MoveAreaButton>
+                <MoveAreaButton label="Work" area="work" top="14vh" right="-6.0rem" rotate="90"
                     onMouseEnter={ () => highlightSlime('work-slime') } 
                     onMouseLeave={ () => lowlightSlime('work-slime') }
-                >Work</MoveDiv>
-                <MoveDiv area="contact" bottom="17vh" right="-6.0rem" rotate="90"
+                ></MoveAreaButton>
+                <MoveAreaButton label="Contact" area="contact" bottom="17vh" right="-6.0rem" rotate="90"
                     onMouseEnter={ () => highlightSlime('contact-slime') } 
                     onMouseLeave={ () => lowlightSlime('contact-slime') }
-                >Contact</MoveDiv>
+                ></MoveAreaButton>
             </div>
 
-            <div className="profile">
-                <MoveDiv top="1vh" right="0rem" width="9rem" rotate="0"
-                    area="title" hover={1}
-                >Back</MoveDiv>
-
+            <div id="profile">
+                <MoveAreaButton area="title" label="Back"
+                    top="1vh" right="0rem" width="9rem" rotate="0"
+                ></MoveAreaButton>
                 <Profile></Profile>
-
                 <LeftSlime width="140vw" height="125vh"></LeftSlime>
             </div>
 
-            <div className="work">
-                <MoveDiv area="title" top="1vh" left="0rem" width="8rem" rotate="0">Back</MoveDiv>
+            <div id="work">
+                <MoveAreaButton area="title" label="Back"  
+                    top="1vh" left="0rem" width="8rem" rotate="0"
+                ></MoveAreaButton>
                 <WorkSlime width="140vw" height="125vh"></WorkSlime>
             </div>
 
-            <div className="contact">
-                <MoveDiv area="title" top="1vh" left="0rem" width="8rem" rotate="0">Back</MoveDiv>
+            <div id="contact">
+                <MoveAreaButton area="title" label="Back"  
+                    top="1vh" left="0rem" width="8rem" rotate="0"
+                ></MoveAreaButton>
                 <ContactSlime width="140vw" height="125vh"></ContactSlime>
             </div>
 
-            <div className="none1">none1</div>
-            <div className="none2">none2</div>
+            <div id="none1">none1</div>
+            <div id="none2">none2</div>
         </div>
     )
 }

@@ -2,7 +2,7 @@ body {
     background-color: #EAE9E5;
 }
 
-.main {
+#main {
     width: 300vw;
     height: 200vh;
 
@@ -21,35 +21,34 @@ body {
     position: fixed;
 }
 
-.title { 
+#title { 
     grid-area: title;
-    /* comment */
 }
 
-.profile { 
+#profile { 
     grid-area: profile;
     margin-right: 3rem;
 }
 
-.work { 
+#work { 
     grid-area: work;
 }
 
-.contact { 
+#contact { 
     grid-area: contact
 }
 
-.title, .work,
-.profile, .contact {
+#work, #contact {
+    margin-left: 3rem;
+}
+
+#title, #work,
+#profile, #contact {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
-.work, .contact {
-    margin-left: 3rem;
-}
-
-.none1 { grid-area: none1 }
-.none2 { grid-area: none2 }
+#none1 { grid-area: none1 }
+#none2 { grid-area: none2 }
