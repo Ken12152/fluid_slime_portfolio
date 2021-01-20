@@ -1,0 +1,12 @@
+#work-slime {
+    fill: #e8a2a0;
+}
+
+#work-slime.slime-highlight {
+    fill: rgb(204, 33, 33);
+    opacity: 0.7;
+}
+
+#work-slime-container.slime-highlight {
+    transform: translateX(-10vw);
+}

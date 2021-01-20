@@ -1,5 +1,5 @@
 import React from 'react'
-import './highlightSlimeAnimation.css'
+import './slimeAnimationContainer.css'
 
 export default props => {
     const defaultAnimationDuration = "8s"

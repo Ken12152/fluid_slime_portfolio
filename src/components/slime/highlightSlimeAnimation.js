@@ -1,10 +1,16 @@
 import slimeConfig from '../../config/slimeConfig'
 
+function getSlimeElements(slimeId, containerId) {
+    const svg = document.getElementById(slimeId)
+    const container = document.getElementById(containerId)
+
+    return { svg, container }
+}
+
 export function highlightSlime({ slimeId, containerId }) {
     const animationClassName = slimeConfig.animationClassName
 
-    const svg = document.getElementById(slimeId)
-    const container = document.getElementById(containerId)
+    const { svg, container } = getSlimeElements(slimeId, containerId)
 
     svg.classList.add(animationClassName)
     container.classList.add(animationClassName)
@@ -13,8 +19,7 @@ export function highlightSlime({ slimeId, containerId }) {
 export function lowlightSlime({ slimeId, containerId }) {
     const animationClassName = slimeConfig.animationClassName
 
-    const svg = document.getElementById(slimeId)
-    const container = document.getElementById(containerId)
+    const { svg, container } = getSlimeElements(slimeId, containerId)
 
     svg.classList.remove(animationClassName)
     container.classList.remove(animationClassName)

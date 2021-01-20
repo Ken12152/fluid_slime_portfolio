@@ -1,0 +1,12 @@
+#contact-slime {
+    fill: #e8a2a0;
+}
+
+#contact-slime.slime-highlight {
+    fill: rgb(204, 33, 33);
+    opacity: 0.7;
+}
+
+#contact-slime-container.slime-highlight {
+    transform: translateX(-10vw);
+}

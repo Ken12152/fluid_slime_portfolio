@@ -1,13 +1,18 @@
 import React from 'react'
-import SlimeAnimation from '../../components/slime/slimeAnimation'
+import './contactSlime.css'
 
-import slimeAnimationPath from '../slimeSvgData/slime_1'
+import SlimeAnimationContainer from '../../components/slime/slimeAnimationContainer'
+
+import slimeConfig from '../../config/slimeConfig'
+import slimeSvgData from '../../data/slimeSvgData/slime_1'
 
 export default props => (
-    <SlimeAnimation containerId="contact-slime-container"
-        width={props.width} height={props.height} style={props.style}
+    <SlimeAnimationContainer
+        width="140vw" height="125vh" 
+        containerId={slimeConfig.contact.containerId}
 
-        slimeId="contact-slime"
-        dur="3s" values={slimeAnimationPath} viewBox="0 0 634.33 703.22" 
-    ></SlimeAnimation>
+        dur="3s" 
+        slimeId={slimeConfig.contact.slimeId} 
+        values={slimeSvgData.animationPath} viewBox={slimeSvgData.viewBox} 
+    ></SlimeAnimationContainer>
 )

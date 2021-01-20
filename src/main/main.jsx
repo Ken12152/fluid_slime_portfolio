@@ -36,22 +36,18 @@ export default props => {
 
                 <MoveAreaButton area={gridAreaName.work} label="Work" 
                     top="14vh" right="-6.0rem" rotate="90"
-                    onMouseEnter={ () => highlightSlime('work-slime') } 
-                    onMouseLeave={ () => lowlightSlime('work-slime') }
+                    onMouseEnter={ () => highlightSlime(slimeConfig.work) } 
+                    onMouseLeave={ () => lowlightSlime(slimeConfig.work) }
                 ></MoveAreaButton>
                 <MoveAreaButton area={gridAreaName.contact} label="Contact" 
                     bottom="17vh" right="-6.0rem" rotate="90"
-                    onMouseEnter={ () => highlightSlime('contact-slime') } 
-                    onMouseLeave={ () => lowlightSlime('contact-slime') }
+                    onMouseEnter={ () => highlightSlime(slimeConfig.contact) } 
+                    onMouseLeave={ () => lowlightSlime(slimeConfig.contact) }
                 ></MoveAreaButton>
             </div>
 
             <div id="profile">
-                {/*  */}
-                {/*  */}
                 <ProfileSlime></ProfileSlime>
-                {/*  */}
-                {/*  */}
 
                 <Profile></Profile>
 
@@ -61,17 +57,19 @@ export default props => {
             </div>
 
             <div id="work">
+                <WorkSlime></WorkSlime>
+
                 <MoveAreaButton area={gridAreaName.title} label="Back"  
                     top="1vh" left="0rem" width="8rem" rotate="0"
                 ></MoveAreaButton>
-                {/* <WorkSlime width="140vw" height="125vh"></WorkSlime> */}
             </div>
 
             <div id="contact">
+                <ContactSlime></ContactSlime>
+
                 <MoveAreaButton area={gridAreaName.title} label="Back"  
                     top="1vh" left="0rem" width="8rem" rotate="0"
                 ></MoveAreaButton>
-                {/* <ContactSlime width="140vw" height="125vh"></ContactSlime> */}
             </div>
 
             <div id="none1">none1</div>
