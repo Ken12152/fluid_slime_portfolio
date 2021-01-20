@@ -72,45 +72,7 @@ body {
     cursor: pointer;
     transition: color 0.3s ease;
 }
-/* slime container */
-.slime-container {
-    transform: translate(0, 0);
-    transition: transform 0.5s ease;
-}
 
-#profile-slime-container.slime-highlight {
-    transform: translate(10vw, 0);
-}
-
-#work-slime-container.slime-highlight,
-#contact-slime-container.slime-highlight {
-    transform: translateX(-10vw);
-}
-
-
-/* slime */
-.slime {
-    transition: all 0.7s ease;
-}
-
-#profile-slime {
-    transform: rotate(180deg);
-    fill: #e8a2a0;
-}
-
-#profile-slime.slime-highlight {
-    fill: rgb(204, 33, 33);
-    opacity: 0.7;
-}
-
-#work-slime, #contact-slime {
-    fill: #e8a2a0;
-}
-
-#work-slime.slime-highlight, #contact-slime.slime-highlight {
-    fill: rgb(204, 33, 33);
-    opacity: 0.7;
-}
 .profile-container {
     /* display: flex;
     flex-direction: column;
@@ -133,3 +95,63 @@ body {
 .profile-container :last-child {
     margin-bottom: 3vh;
 }
+#profile-slime {
+    transform: rotate(180deg);
+    fill: #e8a2a0;
+}
+
+#profile-slime.slime-highlight {
+    fill: rgb(204, 33, 33);
+    opacity: 0.7;
+}
+
+#profile-slime-container.slime-highlight {
+    transform: translate(10vw, 0);
+}
+
+.slime {
+    width: 100%;
+    height: 100%;
+    /* position: relative(ou outro fora static)
+        para poder setar z-index */
+    position: relative;
+    z-index: -10;
+
+    transition: all 0.7s ease;
+}
+
+.slime-container {
+    /*  possiton: absolute 
+        para sair do fluxo do flexbox */
+    position: absolute;
+
+    transform: translate(0, 0);
+    transition: transform 0.5s ease;
+}
+
+#contact-slime {
+    fill: #e8a2a0;
+}
+
+#contact-slime.slime-highlight {
+    fill: rgb(204, 33, 33);
+    opacity: 0.7;
+}
+
+#contact-slime-container.slime-highlight {
+    transform: translateX(-10vw);
+}
+
+#work-slime {
+    fill: #e8a2a0;
+}
+
+#work-slime.slime-highlight {
+    fill: rgb(204, 33, 33);
+    opacity: 0.7;
+}
+
+#work-slime-container.slime-highlight {
+    transform: translateX(-10vw);
+}
+
