@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react'
 import './app.css'
 
+// import MoveBtn from '../components/button/translateBtn'
 import translate from '../components/button/translate'
+import MoveDiv from '../components/button/moveAreaDiv'
+import { highlightSlime, lowlightSlime } from '../components/slimeshape/highlightSlimeAnimation'
 
-import MoveBtn from '../components/button/translateBtn'
 import LeftSlime from '../components/contents/profile/leftSlime'
 import WorkSlime from '../components/contents/work/workSlime'
 import ContactSlime from '../components/contents/contact/contactSlime'
 import Profile from '../components/contents/profile/profile'
-import MoveDiv from '../components/button/moveAreaDiv'
 
-import { highlightSlime, lowlightSlime } from '../components/slimeshape/highlightSlimeAnimation'
 
 export default props => {
     const initPos = 'title'

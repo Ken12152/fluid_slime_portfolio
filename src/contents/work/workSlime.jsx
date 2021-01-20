@@ -1,5 +1,5 @@
 import React from 'react'
-import SlimeAnimation from '../../slimeshape/slimeAnimation'
+import SlimeAnimation from '../../components/slimeshape/slimeAnimation'
 
 export default props => (
     <SlimeAnimation containerId="work-slime-container"
