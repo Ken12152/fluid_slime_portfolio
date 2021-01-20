@@ -1,6 +1,6 @@
 import React from 'react'
 import './profile.css'
-import LoremIpsum from '../text/genLoremIpsum'
+import LoremIpsum from '../../text/genLoremIpsum'
 
 export default props => {
     const times = 8
