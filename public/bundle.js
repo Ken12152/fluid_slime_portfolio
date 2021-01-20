@@ -194,99 +194,75 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 /***/ }),
 
-/***/ "./src/components/button/moveAreaDiv.css":
-/*!***********************************************!*\
-  !*** ./src/components/button/moveAreaDiv.css ***!
-  \***********************************************/
+/***/ "./src/components/button/moveArea.js":
+/*!*******************************************!*\
+  !*** ./src/components/button/moveArea.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _config_gridAreaName__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../config/gridAreaName */ \"./src/config/gridAreaName.js\");\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\n\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nfunction _iterableToArrayLimit(arr, i) { if (typeof Symbol === \"undefined\" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"] != null) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; }\n\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (gridArea) {\n  var _coordinate;\n\n  var coordinate = (_coordinate = {}, _defineProperty(_coordinate, _config_gridAreaName__WEBPACK_IMPORTED_MODULE_0__[\"default\"].title, [100, 50]), _defineProperty(_coordinate, _config_gridAreaName__WEBPACK_IMPORTED_MODULE_0__[\"default\"].profile, [0, 50]), _defineProperty(_coordinate, _config_gridAreaName__WEBPACK_IMPORTED_MODULE_0__[\"default\"].work, [200, 0]), _defineProperty(_coordinate, _config_gridAreaName__WEBPACK_IMPORTED_MODULE_0__[\"default\"].contact, [200, 100]), _coordinate); // is also ok ~ \n  // const [width, height] = coordinate[(coordinate.hasOwnProperty(gridArea)) ? gridArea : 'title']\n\n  var _coordinate2 = _slicedToArray(coordinate[gridArea in coordinate ? gridArea : 'title'], 2),\n      width = _coordinate2[0],\n      height = _coordinate2[1];\n\n  var main = document.getElementById('main');\n  main.setAttribute('style', \"transform: translate(-\".concat(width, \"vw, -\").concat(height, \"vh)\")); // ainda testar se functiona\n  // main.style.transform = `translate(-${coordinate.width}, -${coordinate.height})`\n});\n\n//# sourceURL=webpack:///./src/components/button/moveArea.js?");
+
+/***/ }),
+
+/***/ "./src/components/button/moveAreaButton.css":
+/*!**************************************************!*\
+  !*** ./src/components/button/moveAreaButton.css ***!
+  \**************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/components/button/moveAreaDiv.css?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/components/button/moveAreaButton.css?");
 
 /***/ }),
 
-/***/ "./src/components/button/moveAreaDiv.jsx":
-/*!***********************************************!*\
-  !*** ./src/components/button/moveAreaDiv.jsx ***!
-  \***********************************************/
+/***/ "./src/components/button/moveAreaButton.jsx":
+/*!**************************************************!*\
+  !*** ./src/components/button/moveAreaButton.jsx ***!
+  \**************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _moveAreaDiv_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moveAreaDiv.css */ \"./src/components/button/moveAreaDiv.css\");\n/* harmony import */ var _translate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./translate */ \"./src/components/button/translate.js\");\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (props) {\n  var style = {\n    top: \"\".concat(props.top),\n    bottom: \"\".concat(props.bottom),\n    left: \"\".concat(props.left),\n    right: \"\".concat(props.right),\n    transform: \"rotate(\".concat(props.rotate, \"deg)\")\n  };\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    onClick: function onClick() {\n      return Object(_translate__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(props.area);\n    },\n    className: \"move-area-btn\",\n    style: style\n  }, props.children);\n});\n\n//# sourceURL=webpack:///./src/components/button/moveAreaDiv.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _moveAreaButton_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moveAreaButton.css */ \"./src/components/button/moveAreaButton.css\");\n/* harmony import */ var _moveArea__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./moveArea */ \"./src/components/button/moveArea.js\");\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (props) {\n  var style = {\n    top: \"\".concat(props.top),\n    bottom: \"\".concat(props.bottom),\n    left: \"\".concat(props.left),\n    right: \"\".concat(props.right),\n    transform: \"rotate(\".concat(props.rotate, \"deg)\")\n  };\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"movearea-btn\",\n    style: style,\n    onClick: function onClick() {\n      return Object(_moveArea__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(props.area);\n    },\n    onMouseEnter: props.onMouseEnter,\n    onMouseLeave: props.onMouseLeave\n  }, props.label);\n});\n\n//# sourceURL=webpack:///./src/components/button/moveAreaButton.jsx?");
 
 /***/ }),
 
-/***/ "./src/components/button/translate.js":
-/*!********************************************!*\
-  !*** ./src/components/button/translate.js ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\n\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nfunction _iterableToArrayLimit(arr, i) { if (typeof Symbol === \"undefined\" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"] != null) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; }\n\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (gridAreaName) {\n  var coordinate = {\n    title: [100, 50],\n    profile: [0, 50],\n    work: [200, 0],\n    contact: [200, 100]\n  };\n\n  var _coordinate = _slicedToArray(coordinate[gridAreaName in coordinate ? gridAreaName : 'title'], 2),\n      width = _coordinate[0],\n      height = _coordinate[1]; // is also ok ~ \n  // const [width, height] = coordinate[(coordinate.hasOwnProperty(gridAreaName)) ? gridAreaName : 'title']\n\n\n  var main = document.querySelector('.main');\n  main.setAttribute('style', \"transform: translate(-\".concat(width, \"vw, -\").concat(height, \"vh)\")); // not func\n  // main.style.transform = `translate(-${coordinate.width}, -${coordinate.height})`\n});\n\n//# sourceURL=webpack:///./src/components/button/translate.js?");
-
-/***/ }),
-
-/***/ "./src/components/button/translateBtn.jsx":
-/*!************************************************!*\
-  !*** ./src/components/button/translateBtn.jsx ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _translate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./translate */ \"./src/components/button/translate.js\");\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\nvar defaultStyle = {\n  position: 'relative',\n  zIndex: '10'\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (props) {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"button\", {\n    onClick: function onClick() {\n      return Object(_translate__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(\"\".concat(props.move));\n    },\n    style: _objectSpread(_objectSpread({}, defaultStyle), props.style)\n  }, props.children);\n});\n\n//# sourceURL=webpack:///./src/components/button/translateBtn.jsx?");
-
-/***/ }),
-
-/***/ "./src/components/profile/profile.css":
-/*!********************************************!*\
-  !*** ./src/components/profile/profile.css ***!
-  \********************************************/
+/***/ "./src/components/fluidSlime/highlightSlimeAnimation.css":
+/*!***************************************************************!*\
+  !*** ./src/components/fluidSlime/highlightSlimeAnimation.css ***!
+  \***************************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/components/profile/profile.css?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/components/fluidSlime/highlightSlimeAnimation.css?");
 
 /***/ }),
 
-/***/ "./src/components/profile/profile.jsx":
-/*!********************************************!*\
-  !*** ./src/components/profile/profile.jsx ***!
-  \********************************************/
-/*! exports provided: default */
+/***/ "./src/components/fluidSlime/highlightSlimeAnimation.js":
+/*!**************************************************************!*\
+  !*** ./src/components/fluidSlime/highlightSlimeAnimation.js ***!
+  \**************************************************************/
+/*! exports provided: highlightSlime, lowlightSlime */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _profile_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./profile.css */ \"./src/components/profile/profile.css\");\n/* harmony import */ var _text_genLoremIpsum__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../text/genLoremIpsum */ \"./src/components/text/genLoremIpsum.jsx\");\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (props) {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"profile-container\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_text_genLoremIpsum__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    times: \"5\"\n  }));\n});\n\n//# sourceURL=webpack:///./src/components/profile/profile.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"highlightSlime\", function() { return highlightSlime; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"lowlightSlime\", function() { return lowlightSlime; });\nfunction highlightSlime(slimeName) {\n  var className = \"slime-highlight\";\n  var svg = document.getElementById(slimeName);\n  var container = document.getElementById(\"\".concat(slimeName, \"-container\"));\n  svg.classList.add(className);\n  container.classList.add(className);\n}\nfunction lowlightSlime(slimeName) {\n  var className = 'slime-highlight';\n  var svg = document.getElementById(slimeName);\n  var container = document.getElementById(\"\".concat(slimeName, \"-container\"));\n  svg.classList.remove(className);\n  container.classList.remove(className);\n}\n\n//# sourceURL=webpack:///./src/components/fluidSlime/highlightSlimeAnimation.js?");
 
 /***/ }),
 
-/***/ "./src/components/slimeshape/leftSlime.jsx":
-/*!*************************************************!*\
-  !*** ./src/components/slimeshape/leftSlime.jsx ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _slimeAnimation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./slimeAnimation */ \"./src/components/slimeshape/slimeAnimation.jsx\");\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (props) {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_slimeAnimation__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    width: props.width,\n    height: props.height,\n    style: props.style,\n    dur: \"10s\",\n    id: \"slime-profile\",\n    viewBox: \"0 0 634.33 703.22\",\n    values: \"\\r M105.74,79.59c131.91-116.91,374.05-91.53,415-6c40.28,84.12-131.75,189.49-93,321\\r c35.66,121.03,210.49,130.64,206,187c-5.8,72.81-308.74,198.14-495,57C-28.55,511.83-44.96,213.15,105.74,79.59z;\\r M105.68,79.58c114.47-95,319.89-86.34,376-2c49.62,74.59-49.09,160.89-5,309\\r c36.65,123.11,129.58,146.57,116,202c-21.61,88.24-291.23,168.26-454,50C-29.72,516.24-48.34,207.4,105.68,79.58z;\\r M105.74,79.59c131.91-116.91,374.05-91.53,415-6c40.28,84.12-131.75,189.49-93,321\\r c35.66,121.03,210.49,130.64,206,187c-5.8,72.81-308.74,198.14-495,57C-28.55,511.83-44.96,213.15,105.74,79.59z;\\r \"\n  });\n}); // <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" id=\"slime-profile\" viewBox=\"0 0 1366 768\">\n//     <style type=\"text/css\">\n//         .st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}\n//     </style>\n//     <path>\n//         <animate dur=\"10s\" repeatCount=\"indefinite\" attributeName=\"d\" values=\"\n//              M105.74,79.59c131.91-116.91,374.05-91.53,415-6c40.28,84.12-131.75,189.49-93,321\n//              c35.66,121.03,210.49,130.64,206,187c-5.8,72.81-308.74,198.14-495,57C-28.55,511.83-44.96,213.15,105.74,79.59z;\n// \n//              M105.68,79.58c114.47-95,319.89-86.34,376-2c49.62,74.59-49.09,160.89-5,309\n//              c36.65,123.11,129.58,146.57,116,202c-21.61,88.24-291.23,168.26-454,50C-29.72,516.24-48.34,207.4,105.68,79.58z;\n// \n//              M105.74,79.59c131.91-116.91,374.05-91.53,415-6c40.28,84.12-131.75,189.49-93,321\n//              c35.66,121.03,210.49,130.64,206,187c-5.8,72.81-308.74,198.14-495,57C-28.55,511.83-44.96,213.15,105.74,79.59z;\n//         \"></animate>\n//     </path>\n// </svg>\n\n//# sourceURL=webpack:///./src/components/slimeshape/leftSlime.jsx?");
-
-/***/ }),
-
-/***/ "./src/components/slimeshape/slimeAnimation.jsx":
+/***/ "./src/components/fluidSlime/slimeAnimation.jsx":
 /*!******************************************************!*\
-  !*** ./src/components/slimeshape/slimeAnimation.jsx ***!
+  !*** ./src/components/fluidSlime/slimeAnimation.jsx ***!
   \******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (props) {\n  var svgStyle = {\n    position: 'absolute',\n    width: '100%',\n    height: '100%',\n    zIndex: '-1'\n  };\n  var containerStyle = {\n    position: 'absolute',\n    width: \"\".concat(props.width),\n    height: \"\".concat(props.height)\n  };\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: _objectSpread(_objectSpread({}, containerStyle), props.style)\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"svg\", {\n    id: props.id,\n    viewBox: props.viewBox,\n    version: \"1.1\",\n    xmlns: \"http://www.w3.org/2000/svg\",\n    style: svgStyle,\n    preserveAspectRatio: \"none\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"path\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"animate\", {\n    values: props.values,\n    dur: props.dur ? props.dur : \"10s\",\n    repeatCount: \"indefinite\",\n    attributeName: \"d\"\n  }))));\n});\n\n//# sourceURL=webpack:///./src/components/slimeshape/slimeAnimation.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _highlightSlimeAnimation_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./highlightSlimeAnimation.css */ \"./src/components/fluidSlime/highlightSlimeAnimation.css\");\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (props) {\n  var svgStyle = {\n    position: 'absolute',\n    width: '100%',\n    height: '100%',\n    zIndex: '-1'\n  };\n  var containerStyle = {\n    position: 'absolute',\n    width: \"\".concat(props.width),\n    height: \"\".concat(props.height)\n  };\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: props.containerId,\n    className: \"slime-container\",\n    style: _objectSpread(_objectSpread({}, containerStyle), props.style)\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"svg\", {\n    id: props.slimeId,\n    className: \"slime\",\n    style: svgStyle,\n    viewBox: props.viewBox,\n    preserveAspectRatio: \"none\",\n    version: \"1.1\",\n    xmlns: \"http://www.w3.org/2000/svg\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"path\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"animate\", {\n    values: props.values,\n    dur: props.dur ? props.dur : \"10s\",\n    repeatCount: \"indefinite\",\n    attributeName: \"d\"\n  }))));\n});\n\n//# sourceURL=webpack:///./src/components/fluidSlime/slimeAnimation.jsx?");
 
 /***/ }),
 
@@ -302,6 +278,102 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 
 /***/ }),
 
+/***/ "./src/config/gridAreaName.js":
+/*!************************************!*\
+  !*** ./src/config/gridAreaName.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar gridAreaName = {\n  title: 'title',\n  profile: 'profile',\n  work: 'work',\n  contact: 'contact',\n  none1: 'none1',\n  none2: 'none2'\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (gridAreaName);\n\n//# sourceURL=webpack:///./src/config/gridAreaName.js?");
+
+/***/ }),
+
+/***/ "./src/contents/contact/contactSlime.jsx":
+/*!***********************************************!*\
+  !*** ./src/contents/contact/contactSlime.jsx ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_fluidSlime_slimeAnimation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/fluidSlime/slimeAnimation */ \"./src/components/fluidSlime/slimeAnimation.jsx\");\n/* harmony import */ var _slimeAnimationPath_slime_1__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../slimeAnimationPath/slime_1 */ \"./src/contents/slimeAnimationPath/slime_1.js\");\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (props) {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_fluidSlime_slimeAnimation__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    containerId: \"contact-slime-container\",\n    width: props.width,\n    height: props.height,\n    style: props.style,\n    slimeId: \"contact-slime\",\n    dur: \"3s\",\n    values: _slimeAnimationPath_slime_1__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n    viewBox: \"0 0 634.33 703.22\"\n  });\n});\n\n//# sourceURL=webpack:///./src/contents/contact/contactSlime.jsx?");
+
+/***/ }),
+
+/***/ "./src/contents/profile/profile.css":
+/*!******************************************!*\
+  !*** ./src/contents/profile/profile.css ***!
+  \******************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/contents/profile/profile.css?");
+
+/***/ }),
+
+/***/ "./src/contents/profile/profile.jsx":
+/*!******************************************!*\
+  !*** ./src/contents/profile/profile.jsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _profile_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./profile.css */ \"./src/contents/profile/profile.css\");\n/* harmony import */ var _components_text_genLoremIpsum__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/text/genLoremIpsum */ \"./src/components/text/genLoremIpsum.jsx\");\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (props) {\n  var times = 8;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"profile-container\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_text_genLoremIpsum__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    times: times\n  }));\n});\n\n//# sourceURL=webpack:///./src/contents/profile/profile.jsx?");
+
+/***/ }),
+
+/***/ "./src/contents/profile/profileSlime.jsx":
+/*!***********************************************!*\
+  !*** ./src/contents/profile/profileSlime.jsx ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_fluidSlime_slimeAnimation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/fluidSlime/slimeAnimation */ \"./src/components/fluidSlime/slimeAnimation.jsx\");\n/* harmony import */ var _slimeAnimationPath_slime_1__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../slimeAnimationPath/slime_1 */ \"./src/contents/slimeAnimationPath/slime_1.js\");\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (props) {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_fluidSlime_slimeAnimation__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    containerId: \"profile-slime-container\",\n    width: props.width,\n    height: props.height,\n    style: props.style,\n    slimeId: \"profile-slime\",\n    dur: \"3s\",\n    values: _slimeAnimationPath_slime_1__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n    viewBox: \"0 0 634.33 703.22\"\n  });\n});\n\n//# sourceURL=webpack:///./src/contents/profile/profileSlime.jsx?");
+
+/***/ }),
+
+/***/ "./src/contents/slimeAnimationPath/slime_1.js":
+/*!****************************************************!*\
+  !*** ./src/contents/slimeAnimationPath/slime_1.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar slimeAnimationPath = \"\\n    M105.74,79.59c131.91-116.91,374.05-91.53,415-6c40.28,84.12-131.75,189.49-93,321\\n    c35.66,121.03,210.49,130.64,206,187c-5.8,72.81-308.74,198.14-495,57C-28.55,511.83-44.96,213.15,105.74,79.59z;\\n\\n    M105.68,79.58c114.47-95,319.89-86.34,376-2c49.62,74.59-49.09,160.89-5,309\\n    c36.65,123.11,129.58,146.57,116,202c-21.61,88.24-291.23,168.26-454,50C-29.72,516.24-48.34,207.4,105.68,79.58z;\\n\\n    M105.74,79.59c131.91-116.91,374.05-91.53,415-6c40.28,84.12-131.75,189.49-93,321\\n    c35.66,121.03,210.49,130.64,206,187c-5.8,72.81-308.74,198.14-495,57C-28.55,511.83-44.96,213.15,105.74,79.59z;\\n\";\n/* harmony default export */ __webpack_exports__[\"default\"] = (slimeAnimationPath); // <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1366 768\">\n//     <style type=\"text/css\">\n//         .st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}\n//     </style>\n//     <path>\n//         <animate dur=\"10s\" repeatCount=\"indefinite\" attributeName=\"d\" values=\"\n//              M105.74,79.59c131.91-116.91,374.05-91.53,415-6c40.28,84.12-131.75,189.49-93,321\n//              c35.66,121.03,210.49,130.64,206,187c-5.8,72.81-308.74,198.14-495,57C-28.55,511.83-44.96,213.15,105.74,79.59z;\n// \n//              M105.68,79.58c114.47-95,319.89-86.34,376-2c49.62,74.59-49.09,160.89-5,309\n//              c36.65,123.11,129.58,146.57,116,202c-21.61,88.24-291.23,168.26-454,50C-29.72,516.24-48.34,207.4,105.68,79.58z;\n// \n//              M105.74,79.59c131.91-116.91,374.05-91.53,415-6c40.28,84.12-131.75,189.49-93,321\n//              c35.66,121.03,210.49,130.64,206,187c-5.8,72.81-308.74,198.14-495,57C-28.55,511.83-44.96,213.15,105.74,79.59z;\n//         \"></animate>\n//     </path>\n// </svg>\n\n//# sourceURL=webpack:///./src/contents/slimeAnimationPath/slime_1.js?");
+
+/***/ }),
+
+/***/ "./src/contents/work/workSlime.jsx":
+/*!*****************************************!*\
+  !*** ./src/contents/work/workSlime.jsx ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_fluidSlime_slimeAnimation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/fluidSlime/slimeAnimation */ \"./src/components/fluidSlime/slimeAnimation.jsx\");\n/* harmony import */ var _slimeAnimationPath_slime_1__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../slimeAnimationPath/slime_1 */ \"./src/contents/slimeAnimationPath/slime_1.js\");\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (props) {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_fluidSlime_slimeAnimation__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    containerId: \"work-slime-container\",\n    width: props.width,\n    height: props.height,\n    style: props.style,\n    slimeId: \"work-slime\",\n    dur: \"3s\",\n    values: _slimeAnimationPath_slime_1__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n    viewBox: \"0 0 634.33 703.22\"\n  });\n});\n\n//# sourceURL=webpack:///./src/contents/work/workSlime.jsx?");
+
+/***/ }),
+
+/***/ "./src/index.css":
+/*!***********************!*\
+  !*** ./src/index.css ***!
+  \***********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/index.css?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -310,31 +382,31 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _main_app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./main/app */ \"./src/main/app.jsx\");\n\n\n\nreact_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_main_app__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), document.getElementById('root'));\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _main_main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./main/main */ \"./src/main/main.jsx\");\n\n\n\n\nreact_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_main_main__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null), document.getElementById('root'));\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/main/app.css":
-/*!**************************!*\
-  !*** ./src/main/app.css ***!
-  \**************************/
+/***/ "./src/main/main.css":
+/*!***************************!*\
+  !*** ./src/main/main.css ***!
+  \***************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/main/app.css?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/main/main.css?");
 
 /***/ }),
 
-/***/ "./src/main/app.jsx":
-/*!**************************!*\
-  !*** ./src/main/app.jsx ***!
-  \**************************/
+/***/ "./src/main/main.jsx":
+/*!***************************!*\
+  !*** ./src/main/main.jsx ***!
+  \***************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.css */ \"./src/main/app.css\");\n/* harmony import */ var _components_button_translate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/button/translate */ \"./src/components/button/translate.js\");\n/* harmony import */ var _components_button_translateBtn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/button/translateBtn */ \"./src/components/button/translateBtn.jsx\");\n/* harmony import */ var _components_slimeshape_leftSlime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/slimeshape/leftSlime */ \"./src/components/slimeshape/leftSlime.jsx\");\n/* harmony import */ var _components_profile_profile__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/profile/profile */ \"./src/components/profile/profile.jsx\");\n/* harmony import */ var _components_button_moveAreaDiv__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/button/moveAreaDiv */ \"./src/components/button/moveAreaDiv.jsx\");\n\n\n\n\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (props) {\n  var initPos = 'title';\n  Object(react__WEBPACK_IMPORTED_MODULE_0__[\"useEffect\"])(function () {\n    return Object(_components_button_translate__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(initPos);\n  }, []);\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"main\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"title\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_translateBtn__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    move: \"profile\"\n  }, \"left\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_translateBtn__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    move: \"work\"\n  }, \"topRight\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_translateBtn__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    move: \"contact\"\n  }, \"bottomRight\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_moveAreaDiv__WEBPACK_IMPORTED_MODULE_6__[\"default\"], {\n    area: \"profile\",\n    top: \"44vh\",\n    left: \"-7rem\",\n    rotate: \"-90\"\n  }, \"Profile\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"profile\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_translateBtn__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    move: \"title\",\n    style: {\n      zIndex: '100',\n      position: 'absolute',\n      top: '-0vh',\n      left: '0vw'\n    }\n  }, \"move to title\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_profile_profile__WEBPACK_IMPORTED_MODULE_5__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_slimeshape_leftSlime__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n    width: \"140vw\",\n    height: \"125vh\",\n    style: {\n      fill: '#e8a2a0' // zIndex: '-2',\n      // backgroundColor: 'gray',\n      // opacity: '0.5',\n\n    }\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"work\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_translateBtn__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    move: \"title\"\n  }, \"move to title\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"contact\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_translateBtn__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    move: \"title\"\n  }, \"move to title\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"none1\"\n  }, \"none1\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"none2\"\n  }, \"none2\"));\n});\n\n//# sourceURL=webpack:///./src/main/app.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main.css */ \"./src/main/main.css\");\n/* harmony import */ var _components_button_moveAreaButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/button/moveAreaButton */ \"./src/components/button/moveAreaButton.jsx\");\n/* harmony import */ var _contents_profile_profileSlime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../contents/profile/profileSlime */ \"./src/contents/profile/profileSlime.jsx\");\n/* harmony import */ var _contents_work_workSlime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../contents/work/workSlime */ \"./src/contents/work/workSlime.jsx\");\n/* harmony import */ var _contents_contact_contactSlime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../contents/contact/contactSlime */ \"./src/contents/contact/contactSlime.jsx\");\n/* harmony import */ var _contents_profile_profile__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../contents/profile/profile */ \"./src/contents/profile/profile.jsx\");\n/* harmony import */ var _components_button_moveArea__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/button/moveArea */ \"./src/components/button/moveArea.js\");\n/* harmony import */ var _components_fluidSlime_highlightSlimeAnimation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/fluidSlime/highlightSlimeAnimation */ \"./src/components/fluidSlime/highlightSlimeAnimation.js\");\n/* harmony import */ var _config_gridAreaName__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../config/gridAreaName */ \"./src/config/gridAreaName.js\");\n\n\n/* jsx component */\n\n/* components */\n\n // import _MoveAreaButton from '../components/button/_moveAreaButton'\n\n/* contents */\n\n\n\n\n\n/* func */\n\n\n\n/* config file */\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (props) {\n  var initPos = _config_gridAreaName__WEBPACK_IMPORTED_MODULE_9__[\"default\"].title;\n  Object(react__WEBPACK_IMPORTED_MODULE_0__[\"useEffect\"])(function () {\n    return Object(_components_button_moveArea__WEBPACK_IMPORTED_MODULE_7__[\"default\"])(initPos);\n  }, []);\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"main\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"title\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_moveAreaButton__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    area: _config_gridAreaName__WEBPACK_IMPORTED_MODULE_9__[\"default\"].profile,\n    label: \"Profile\",\n    top: \"44vh\",\n    left: \"-6.0rem\",\n    rotate: \"-90\",\n    onMouseEnter: function onMouseEnter() {\n      return Object(_components_fluidSlime_highlightSlimeAnimation__WEBPACK_IMPORTED_MODULE_8__[\"highlightSlime\"])('profile-slime');\n    },\n    onMouseLeave: function onMouseLeave() {\n      return Object(_components_fluidSlime_highlightSlimeAnimation__WEBPACK_IMPORTED_MODULE_8__[\"lowlightSlime\"])('profile-slime');\n    }\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_moveAreaButton__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    area: _config_gridAreaName__WEBPACK_IMPORTED_MODULE_9__[\"default\"].work,\n    label: \"Work\",\n    top: \"14vh\",\n    right: \"-6.0rem\",\n    rotate: \"90\",\n    onMouseEnter: function onMouseEnter() {\n      return Object(_components_fluidSlime_highlightSlimeAnimation__WEBPACK_IMPORTED_MODULE_8__[\"highlightSlime\"])('work-slime');\n    },\n    onMouseLeave: function onMouseLeave() {\n      return Object(_components_fluidSlime_highlightSlimeAnimation__WEBPACK_IMPORTED_MODULE_8__[\"lowlightSlime\"])('work-slime');\n    }\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_moveAreaButton__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    area: _config_gridAreaName__WEBPACK_IMPORTED_MODULE_9__[\"default\"].contact,\n    label: \"Contact\",\n    bottom: \"17vh\",\n    right: \"-6.0rem\",\n    rotate: \"90\",\n    onMouseEnter: function onMouseEnter() {\n      return Object(_components_fluidSlime_highlightSlimeAnimation__WEBPACK_IMPORTED_MODULE_8__[\"highlightSlime\"])('contact-slime');\n    },\n    onMouseLeave: function onMouseLeave() {\n      return Object(_components_fluidSlime_highlightSlimeAnimation__WEBPACK_IMPORTED_MODULE_8__[\"lowlightSlime\"])('contact-slime');\n    }\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"profile\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_contents_profile_profileSlime__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    width: \"140vw\",\n    height: \"125vh\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_contents_profile_profile__WEBPACK_IMPORTED_MODULE_6__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_moveAreaButton__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    area: _config_gridAreaName__WEBPACK_IMPORTED_MODULE_9__[\"default\"].title,\n    label: \"Back\",\n    top: \"1vh\",\n    right: \"0rem\",\n    width: \"9rem\",\n    rotate: \"0\"\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"work\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_moveAreaButton__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    area: _config_gridAreaName__WEBPACK_IMPORTED_MODULE_9__[\"default\"].title,\n    label: \"Back\",\n    top: \"1vh\",\n    left: \"0rem\",\n    width: \"8rem\",\n    rotate: \"0\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_contents_work_workSlime__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n    width: \"140vw\",\n    height: \"125vh\"\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"contact\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_button_moveAreaButton__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    area: _config_gridAreaName__WEBPACK_IMPORTED_MODULE_9__[\"default\"].title,\n    label: \"Back\",\n    top: \"1vh\",\n    left: \"0rem\",\n    width: \"8rem\",\n    rotate: \"0\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_contents_contact_contactSlime__WEBPACK_IMPORTED_MODULE_5__[\"default\"], {\n    width: \"140vw\",\n    height: \"125vh\"\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"none1\"\n  }, \"none1\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"none2\"\n  }, \"none2\"));\n});\n\n//# sourceURL=webpack:///./src/main/main.jsx?");
 
 /***/ })
 

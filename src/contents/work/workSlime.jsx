@@ -1,7 +1,7 @@
 import React from 'react'
-import SlimeAnimation from '../../components/fluidSlime/slimeAnimation'
+import SlimeAnimation from '../../components/slime/slimeAnimation'
 
-import slimeAnimationPath from '../slimeAnimationPath/slime_1'
+import slimeAnimationPath from '../slimeSvgData/slime_1'
 
 export default props => (
     <SlimeAnimation containerId="work-slime-container"

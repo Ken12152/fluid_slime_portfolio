@@ -1,14 +1,17 @@
 import React from 'react'
-import SlimeAnimation from '../../components/fluidSlime/slimeAnimation'
 
-import slimeAnimationPath from '../slimeAnimationPath/slime_1'
+import SlimeAnimation from '../../components/slime/slimeAnimation'
+
+import slimeConfig from '../../config/slimeConfig'
+import slimeSvgData from '../slimeSvgData/slime_1'
 
 export default props => (
-    <SlimeAnimation containerId="profile-slime-container"
-        width={props.width} height={props.height} style={props.style}
+    <SlimeAnimation
+        width="140vw" height="125vh" dur="3s" 
 
-        slimeId="profile-slime" 
+        slimeId={slimeConfig.profile.slimeId} 
+        containerId={slimeConfig.profile.containerId}
 
-        dur="3s" values={slimeAnimationPath} viewBox="0 0 634.33 703.22" 
+        values={slimeSvgData.animationPath} viewBox={slimeSvgData.viewBox} 
     ></SlimeAnimation>
 )

@@ -2,12 +2,11 @@
     margin: 0px;
     box-sizing: border-box;
 }
-
 body {
     background-color: #EAE9E5;
 }
 
-.main {
+#main {
     width: 300vw;
     height: 200vh;
 
@@ -26,29 +25,92 @@ body {
     position: fixed;
 }
 
-.work, 
-.contact {
+#title { 
+    grid-area: title;
+}
+
+#profile { 
+    grid-area: profile;
+    margin-right: 3rem;
+}
+
+#work { 
+    grid-area: work;
+}
+
+#contact { 
+    grid-area: contact
+}
+
+#work, #contact {
     margin-left: 3rem;
 }
 
-.profile { 
-    grid-area: profile;
+#title, #work,
+#profile, #contact {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
-.title { 
-    grid-area: title;
-    position: relative;
+#none1 { grid-area: none1 }
+#none2 { grid-area: none2 }
+
+.movearea-btn {
+    width: 10rem;
+    padding: 1rem 0rem;
+    text-align: center;
+    font-size: 1.3rem;
+
+    position: absolute;
+    z-index: 10;
 }
 
-.contact { grid-area: contact }
+.movearea-btn:hover {
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+/* slime container */
+.slime-container {
+    transform: translate(0, 0);
+    transition: transform 0.5s ease;
+}
 
-.none1   { grid-area: none1   }
-.none2   { grid-area: none2   }
+#profile-slime-container.slime-highlight {
+    transform: translate(10vw, 0);
+}
 
+#work-slime-container.slime-highlight,
+#contact-slime-container.slime-highlight {
+    transform: translateX(-10vw);
+}
+
+
+/* slime */
+.slime {
+    transition: all 0.7s ease;
+}
+
+#profile-slime {
+    transform: rotate(180deg);
+    fill: #e8a2a0;
+}
+
+#profile-slime.slime-highlight {
+    fill: rgb(204, 33, 33);
+    opacity: 0.7;
+}
+
+#work-slime, #contact-slime {
+    fill: #e8a2a0;
+}
+
+#work-slime.slime-highlight, #contact-slime.slime-highlight {
+    fill: rgb(204, 33, 33);
+    opacity: 0.7;
+}
 .profile-container {
     /* display: flex;
     flex-direction: column;
@@ -57,29 +119,17 @@ body {
 
     width: 100%;
     height: 100%;
-    margin-right: 4rem;
     padding: 12vh 12vw;
 
-    z-index: 1;
+    position: relative;
     overflow-y: scroll;
+    z-index: 1;
 
+    /* margin-right: 3rem; */
     /* opacity: 0.5; */
     /* background: pink; */
 }
 
 .profile-container :last-child {
     margin-bottom: 3vh;
-}
-.move-area-btn {
-    padding: 0.5rem 3rem;
-    font-size: 1.3rem;
-
-    position: absolute;
-    z-index: 10;
-}
-
-.move-area-btn:hover {
-    color: white;
-    cursor: pointer;
-    transition: color 0.3s ease-out;
 }

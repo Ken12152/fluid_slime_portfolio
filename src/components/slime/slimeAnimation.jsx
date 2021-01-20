@@ -2,30 +2,25 @@ import React from 'react'
 import './highlightSlimeAnimation.css'
 
 export default props => {
-    const svgStyle = {
-        position: 'absolute',
-        width: '100%', 
-        height: '100%',
-        zIndex: '-1',
-    }
+    const defaultAnimationDuration = "8s"
 
-    const containerStyle = {
-        position: 'absolute',
+    const containerSize = {
         width: `${props.width}`,
         height: `${props.height}`,
     }
 
     return (
         <div id={props.containerId} className="slime-container" 
-            style={{ ...containerStyle, ...props.style }}>
+            style={{ ...containerSize, ...props.style }}>
 
-            <svg id={props.slimeId} className="slime" style={svgStyle} 
+            <svg id={props.slimeId} className="slime"
                 viewBox={props.viewBox} preserveAspectRatio="none"
                 version="1.1" xmlns="http://www.w3.org/2000/svg">
 
                 <path>
                     <animate values={props.values}
-                        dur={props.dur ? props.dur : "10s"} repeatCount="indefinite" attributeName="d"
+                        attributeName="d" repeatCount="indefinite" 
+                        dur={props.dur || defaultAnimationDuration} 
                     ></animate>
                 </path>
             </svg>

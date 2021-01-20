@@ -1,9 +1,31 @@
+/* slime */
+.slime {
+    width: 100%;
+    height: 100%;
+    /* position: relative(ou outro fora static)
+        para poder setar z-index */
+    position: relative;
+    z-index: -10;
+
+    transition: all 0.7s ease;
+}
+
 /* slime container */
 .slime-container {
+    /*  possiton: absolute 
+        para sair do fluxo do flexbox */
+    position: absolute;
+
     transform: translate(0, 0);
     transition: transform 0.5s ease;
 }
 
+
+
+
+
+/* transferir pro outra arquivo css */
+/* slime container */
 #profile-slime-container.slime-highlight {
     transform: translate(10vw, 0);
 }
@@ -14,11 +36,8 @@
 }
 
 
-/* slime */
-.slime {
-    transition: all 0.7s ease;
-}
 
+/* slime */
 #profile-slime {
     transform: rotate(180deg);
     fill: #e8a2a0;
