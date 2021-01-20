@@ -1,9 +1,11 @@
+import gridAreaName from '../../config/gridAreaName'
+
 export default gridArea => {
     const coordinate = {
-        title:   [100,  50],
-        profile: [  0,  50],
-        work:    [200,   0],
-        contact: [200, 100],
+        [gridAreaName.profile]: [  0,  50],
+        [gridAreaName.work]:    [200,   0],
+        [gridAreaName.title]:   [100,  50],
+        [gridAreaName.contact]: [200, 100],
     }
 
     // is also ok ~ 
