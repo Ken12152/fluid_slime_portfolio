@@ -37,6 +37,7 @@ export default props => {
                     onMouseEnter={ () => highlightSlime(slimeConfig.work) } 
                     onMouseLeave={ () => lowlightSlime(slimeConfig.work) }
                 ></MoveAreaButton>
+                
                 <MoveAreaButton area={gridAreaName.contact} label="Contact" 
                     bottom="17vh" right="-6.0rem" rotate="90"
                     onMouseEnter={ () => highlightSlime(slimeConfig.contact) } 

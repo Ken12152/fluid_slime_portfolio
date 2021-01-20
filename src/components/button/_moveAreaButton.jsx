@@ -8,7 +8,7 @@ export default props => {
         bottom: `${props.bottom}`,
         left: `${props.left}`,
         right: `${props.right}`,
-        zIndex: '5',
+        zIndex: '10',
     }
 
     return (

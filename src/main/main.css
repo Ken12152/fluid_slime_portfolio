@@ -18,6 +18,7 @@ body {
     transform: translate(-100vw, -50vh);
     transition: transform 0.3s ease;
 
+    /* !!!!!!!!!!!!!!! */
     position: fixed;
 }
 

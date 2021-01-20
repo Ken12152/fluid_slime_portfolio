@@ -9,12 +9,12 @@ export default gridArea => {
     }
 
     // is also ok ~ 
-    // const [width, height] = coordinate[(coordinate.hasOwnProperty(gridArea)) ? gridArea : 'title']
-    const [width, height] = coordinate[(gridArea in coordinate) ? gridArea : 'title']
+    // const [x, y] = coordinate[(coordinate.hasOwnProperty(gridArea)) ? gridArea : gridAreaName.title]
+    const [x, y] = coordinate[(gridArea in coordinate) ? gridArea : gridAreaName.title]
 
     const main = document.getElementById('main')
-    main.setAttribute('style', `transform: translate(-${width}vw, -${height}vh)`)
+    main.setAttribute('style', `transform: translate(-${x}vw, -${y}vh)`)
 
     // ainda testar se functiona
-    // main.style.transform = `translate(-${coordinate.width}, -${coordinate.height})`
+    // main.style.transform = `translate(-${x}vw, -${y}vh)`
 }
