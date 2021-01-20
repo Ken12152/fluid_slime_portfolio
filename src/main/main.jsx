@@ -7,7 +7,7 @@ import MoveAreaButton from '../components/button/moveAreaButton'
 // import _MoveAreaButton from '../components/button/_moveAreaButton'
 
 /* contents */
-import LeftSlime from '../contents/profile/leftSlime'
+import LeftSlime from '../contents/profile/profileSlime'
 import WorkSlime from '../contents/work/workSlime'
 import ContactSlime from '../contents/contact/contactSlime'
 import Profile from '../contents/profile/profile'
