@@ -1,4 +1,4 @@
-const GridAreaName = {
+const gridAreaName = {
     title: 'title',
     profile: 'profile',
     work: 'work',
@@ -7,4 +7,4 @@ const GridAreaName = {
     none2: 'none2'
 }
 
-export default GridAreaName
+export default gridAreaName

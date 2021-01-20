@@ -2,9 +2,9 @@ import gridAreaName from '../../config/gridAreaName'
 
 export default gridArea => {
     const coordinate = {
+        [gridAreaName.title]:   [100,  50],
         [gridAreaName.profile]: [  0,  50],
         [gridAreaName.work]:    [200,   0],
-        [gridAreaName.title]:   [100,  50],
         [gridAreaName.contact]: [200, 100],
     }
 

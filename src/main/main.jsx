@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './app.css'
+import './main.css'
 
 /* jsx component */
 /* components */
@@ -21,7 +21,7 @@ import gridAreaName from '../config/gridAreaName'
 
 
 export default props => {
-    const initPos = gridAreaName.Title
+    const initPos = gridAreaName.title
     useEffect(() => moveArea(initPos), [])
 
     return (
