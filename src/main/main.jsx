@@ -2,19 +2,17 @@ import React, { useEffect } from 'react'
 import './main.css'
 
 /* jsx component */
-/* components */
-import MoveAreaButton from '../components/button/moveAreaButton'
 // import _MoveAreaButton from '../components/button/_moveAreaButton'
+import MoveAreaButton from '../components/button/moveAreaButton'
 
-/* contents */
+import Profile from '../contents/profile/profile'
 import ProfileSlime from '../contents/profile/profileSlime'
 import WorkSlime from '../contents/work/workSlime'
 import ContactSlime from '../contents/contact/contactSlime'
-import Profile from '../contents/profile/profile'
 
 /* func */
 import moveArea from '../components/button/moveArea'
-import { highlightSlime, lowlightSlime } from '../components/slime/highlightSlimeAnimation'
+import { highlightSlime, lowlightSlime } from '../components/slime/highlightSlime'
 
 /* config file */
 import gridAreaName from '../config/gridAreaName'
@@ -22,8 +20,8 @@ import slimeConfig from '../config/slimeConfig'
 
 
 export default props => {
-    const initPos = gridAreaName.title
-    useEffect(() => moveArea(initPos), [])
+    const initArea = gridAreaName.title
+    useEffect(() => moveArea(initArea), [])
 
     return (
         <div id="main">
@@ -72,8 +70,8 @@ export default props => {
                 ></MoveAreaButton>
             </div>
 
-            <div id="none1">none1</div>
-            <div id="none2">none2</div>
+            {/* <div id="none1">none1</div>
+            <div id="none2">none2</div> */}
         </div>
     )
 }

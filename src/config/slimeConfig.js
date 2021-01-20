@@ -11,7 +11,7 @@ const slimeConfig = {
         containerId: 'contact-slime-container',
         slimeId: 'contact-slime'
     },
-    animationClassName: 'slime-highlight',
+    highlightAnimationClassName: 'slime-highlight',
 }
 
 export default slimeConfig
