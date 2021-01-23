@@ -1,9 +1,9 @@
 import React from 'react'
 import './slimeAnimationContainer.css'
 
-export default props => {
-    const defaultAnimationDuration = "8s"
+const defaultAnimationDuration = "8s"
 
+export default props => {
     const containerSize = {
         width: `${props.width}`,
         height: `${props.height}`,
