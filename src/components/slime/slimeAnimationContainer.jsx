@@ -1,5 +1,5 @@
 import React from 'react'
-import './slimeAnimationContainer.css'
+import './slimeAnimationContainer.scss'
 
 const defaultAnimationDuration = "8s"
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import './moveAreaButton.css'
+import './moveAreaButton.scss'
 
 import moveArea from './moveArea'
 

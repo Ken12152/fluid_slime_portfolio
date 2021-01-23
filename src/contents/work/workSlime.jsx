@@ -1,5 +1,5 @@
 import React from 'react'
-import './workSlime.css'
+import './workSlime.scss'
 
 import SlimeAnimationContainer from '../../components/slime/slimeAnimationContainer'
 

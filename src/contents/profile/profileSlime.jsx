@@ -1,5 +1,5 @@
 import React from 'react'
-import './profileSlime.css'
+import './profileSlime.scss'
 
 import SlimeAnimationContainer from '../../components/slime/slimeAnimationContainer'
 

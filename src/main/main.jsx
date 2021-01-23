@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './main.css'
+import './main.scss'
 
 /* jsx component */
 // import _MoveAreaButton from '../components/button/_moveAreaButton'
