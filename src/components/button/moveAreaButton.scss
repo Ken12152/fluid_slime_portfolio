@@ -8,8 +8,11 @@
     z-index: 10;
 }
 
+$ts: 0.5s;
+
 .movearea-btn:hover {
     color: white;
     cursor: pointer;
-    transition: color 0.3s ease;
+    // transition: color 0.3s ease;
+    transition: color $ts ease;
 }

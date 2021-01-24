@@ -15,30 +15,30 @@ import moveArea from '../components/button/moveArea'
 import { highlightSlime, lowlightSlime } from '../components/slime/highlightSlime'
 
 /* config file */
-import gridAreaName from '../config/gridAreaName'
-import slimeConfig from '../config/slimeConfig'
+import gridAreaData from '../utils/gridAreaData'
+import slimeConfig from '../utils/slimeConfig'
 
 
 export default props => {
-    const initArea = gridAreaName.title
+    const initArea = gridAreaData.title.name
     useEffect(() => moveArea(initArea), [])
 
     return (
         <div id="main">
             <div id="title">
-                <MoveAreaButton area={gridAreaName.profile} label="Profile" 
+                <MoveAreaButton area={gridAreaData.profile.name} label="Profile" 
                     top="44vh" left="-6.0rem" rotate="-90"
                     onMouseEnter={ () => highlightSlime(slimeConfig.profile) } 
                     onMouseLeave={ () => lowlightSlime(slimeConfig.profile) }
                 ></MoveAreaButton>
 
-                <MoveAreaButton area={gridAreaName.work} label="Work" 
+                <MoveAreaButton area={gridAreaData.work.name} label="Work" 
                     top="14vh" right="-6.0rem" rotate="90"
                     onMouseEnter={ () => highlightSlime(slimeConfig.work) } 
                     onMouseLeave={ () => lowlightSlime(slimeConfig.work) }
                 ></MoveAreaButton>
                 
-                <MoveAreaButton area={gridAreaName.contact} label="Contact" 
+                <MoveAreaButton area={gridAreaData.contact.name} label="Contact" 
                     bottom="17vh" right="-6.0rem" rotate="90"
                     onMouseEnter={ () => highlightSlime(slimeConfig.contact) } 
                     onMouseLeave={ () => lowlightSlime(slimeConfig.contact) }
@@ -50,7 +50,7 @@ export default props => {
 
                 <Profile></Profile>
 
-                <MoveAreaButton area={gridAreaName.title} label="Back"
+                <MoveAreaButton area={gridAreaData.title.name} label="Back"
                     top="1vh" right="0rem" width="9rem" rotate="0"
                 ></MoveAreaButton>
             </div>
@@ -58,7 +58,7 @@ export default props => {
             <div id="work">
                 <WorkSlime></WorkSlime>
 
-                <MoveAreaButton area={gridAreaName.title} label="Back"  
+                <MoveAreaButton area={gridAreaData.title.name} label="Back"  
                     top="1vh" left="0rem" width="8rem" rotate="0"
                 ></MoveAreaButton>
             </div>
@@ -66,7 +66,7 @@ export default props => {
             <div id="contact">
                 <ContactSlime></ContactSlime>
 
-                <MoveAreaButton area={gridAreaName.title} label="Back"  
+                <MoveAreaButton area={gridAreaData.title.name} label="Back"  
                     top="1vh" left="0rem" width="8rem" rotate="0"
                 ></MoveAreaButton>
             </div>

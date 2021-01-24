@@ -1,4 +1,4 @@
-import slimeConfig from '../../config/slimeConfig'
+import slimeConfig from '../../utils/slimeConfig'
 
 const animationClassName = slimeConfig.highlightAnimationClassName
 
