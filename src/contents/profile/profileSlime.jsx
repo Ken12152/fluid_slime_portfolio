@@ -1,18 +1,21 @@
 import React from 'react'
-import './profileSlime.scss'
 
 import SlimeAnimationContainer from '../../components/slime/slimeAnimationContainer'
 
-import slimeConfig from '../../utils/slimeConfig'
+import slimeConfig from '../../utils/js/slimeConfig'
 import slimeSvgData from '../../utils/slimeSvgData/slime_1'
+
+import './profileSlime.scss'
 
 export default props => (
     <SlimeAnimationContainer
-        width="140vw" height="125vh" 
-        containerId={slimeConfig.profile.containerId}
+        dur="3s" // animation duration
 
-        dur="3s" 
+        // configuracao do style esta no './profieSlime.scss'
+        containerId={slimeConfig.profile.containerId}
         slimeId={slimeConfig.profile.slimeId} 
-        values={slimeSvgData.animationPath} viewBox={slimeSvgData.viewBox} 
+
+        values={slimeSvgData.animationPath} 
+        viewBox={slimeSvgData.viewBox} 
     ></SlimeAnimationContainer>
 )

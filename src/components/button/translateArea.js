@@ -1,17 +1,17 @@
-import gridAreaData from '../../utils/gridAreaData'
+import gridAreaData from '../../utils/js/gridAreaData'
 
 export default gridAreaName => {
-    const homeAreaName = gridAreaData.title.name
+    const homeAreaName = gridAreaData.home.name
 
-    // is also ok ~ 
-    // const [x, y] = gridAreaData[areaExists ? gridArea : homeAreaName]
-
+    // pode ser tbm ~
+    // const areaExists = gridAreaData.hasOwnProperty(gridAreaName)
     const areaExists = gridAreaName in gridAreaData
+
     const [x, y] = gridAreaData[areaExists ? gridAreaName : homeAreaName].coordinate
 
     const main = document.getElementById('main')
     main.setAttribute('style', `transform: translate(-${x}vw, -${y}vh)`)
 
-    // ainda testar se functiona
+    // testar se functiona
     // main.style.transform = `translate(-${x}vw, -${y}vh)`
 }

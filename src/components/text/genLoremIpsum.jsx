@@ -1,5 +1,6 @@
 import React from 'react'
 
+// this component is for debug
 export default props => {
 
     const genLoremIpsum = n => Array(n).fill(0).map((_, i) => (

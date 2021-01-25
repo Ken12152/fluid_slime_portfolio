@@ -1,3 +1,9 @@
+@use './utils/scss/constants';
+
+body {
+    background-color: constants.$background_color;
+}
+
 * {
     margin: 0px;
     box-sizing: border-box;

@@ -1,13 +1,53 @@
-#profile-slime {
-    transform: rotate(180deg);
-    fill: #e8a2a0;
+@use "../../utils/scss/constants";
+
+
+// tempo de animacao esta configurado
+// no profileSlime.jsx(slimeAnimationContainer.jsx(componente original)).
+// pq atributo "dur" do <animation> 
+// nao tem como configurar pelo css
+
+
+// mesmo container_id e slime_id configurado 
+// em arquivo 'utils/slimeConfig.js'
+#profile-slime-container {
+    // como componente filho <svg> possui
+    // css style width: 100% e height: 100%,
+    // o tamanho do container q determina o 
+    // tamanho do slime
+    width: 140vw;
+    height: 125vh;
+
+    // $slime-highlight-class vai ser adicionado
+    // pelo javascript quando deseja comecar animacao
+    &.#{constants.$slime_highlight_class} {
+        transform: translateX(10vw);
+    }
+
+    &__slime {
+        transform: rotate(180deg); // for debug
+
+        fill: #e8a2a0;
+
+        // $slime-highlight-class vai ser adicionado
+        // quando deseja comecar animacao
+        &.#{constants.$slime_highlight_class} {
+            fill: rgb(204, 33, 33);
+            opacity: 0.7;
+        }
+    }
 }
 
-#profile-slime.slime-highlight {
-    fill: rgb(204, 33, 33);
-    opacity: 0.7;
-}
+// .css
+// #profile-slime-container__slime {
+//     transform: rotate(180deg);
+//     fill: #e8a2a0;
+// }
 
-#profile-slime-container.slime-highlight {
-    transform: translate(10vw, 0);
-}
+// #profile-slime-container__slime.slime-highlight {
+//     fill: rgb(204, 33, 33);
+//     opacity: 0.7;
+// }
+
+// #profile-slime-container.slime-highlight {
+//     transform: translate(10vw, 0);
+// }

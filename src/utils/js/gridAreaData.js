@@ -1,6 +1,6 @@
 const gridAreaData = {
-    title: {
-        name: 'title',
+    home: {
+        name: 'home',
         coordinate: [100, 50]
     },
     profile: {
