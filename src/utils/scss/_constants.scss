@@ -1,0 +1,19 @@
+// bgc do site
+$background_color: #EAE9E5;
+
+// tempo q demora pra transicao da area
+$area_translate_duration: 0.3s;
+
+// highlight quando passar mouse por cima do translate-btn
+$translate-button-highlight-duration: 0.5s;
+
+// class pra iniciar animacao.
+// adicionado quando mouse passar 
+// por cima do link(button q serve pra transicao da area)
+$slime_highlight_class: highlight;
+
+// tempo durante highlight e lowlight do slime
+$slime_highlight_duration: 0.7s;
+
+// tempo durante mover container do slime em highlight
+$slime_container_moving_duration: 0.7s;

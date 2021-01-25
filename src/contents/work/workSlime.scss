@@ -1,0 +1,19 @@
+@use "../../utils/scss/constants";
+
+#contact-slime-container {
+    width: 140vw;
+    height: 125vh;
+
+    &.#{constants.$slime_highlight_class} {
+        transform: translateX(-10vw);
+    }
+
+    &__slime {
+        fill: #e8a2a0;
+
+        &.#{constants.$slime_highlight_class} {
+            fill: rgb(204, 33, 33);
+            opacity: 0.7;
+        }
+    }
+}

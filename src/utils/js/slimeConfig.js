@@ -1,17 +1,18 @@
 const slimeConfig = {
+    classOnHighlight: 'highlight',
+
     profile: {
         containerId: 'profile-slime-container',
-        slimeId: 'profile-slime'
+        slimeId: 'profile-slime-container__slime',
     },
     work: {
         containerId: 'work-slime-container',
-        slimeId: 'work-slime'
+        slimeId: 'work-slime-container__slime'
     },
     contact: {
         containerId: 'contact-slime-container',
-        slimeId: 'contact-slime'
+        slimeId: 'contact-slime-container__slime'
     },
-    highlightAnimationClassName: 'slime-highlight',
 }
 
 export default slimeConfig

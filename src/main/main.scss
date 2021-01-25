@@ -1,0 +1,79 @@
+@use '../utils/scss/constants';
+@use '../utils/scss/mixin';
+
+// entra no developer tools do FireFox
+// pra visualizar grid
+
+$center_space_around: 6rem;
+
+#main {
+    width: 300vw;
+    height: 200vh;
+
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr calc(100vw - #{$center_space_around}) 1fr;
+    grid-template-areas: (
+        "empty1 empty1 work"
+        "profile home work"
+        "profile home contact"
+        "empty2 empty2 contact"
+    );
+
+    // iniciar no home
+    // nao pode ser iniciado pelo javascript 
+    // pois vai ser aplicado duration de transition
+    $home_w: 100vw; 
+    $home_h: 50vh;
+    transform: translate(-#{$home_w}, -#{$home_h});
+
+    transition: transform constants.$area_translate_duration ease;
+
+    // fixa a tela apenas no tamanho do viewport
+    // proibindo fazer scroll
+    position: fixed;
+}
+
+
+
+// aplicar grid-area, flexbox,
+// position: relative em cada grid.
+$area_name_list: (
+    home, 
+    profile, work, contact,
+    empty1, empty2
+);
+
+@each $area_name in $area_name_list {
+    ##{$area_name} {
+        grid-area: $area_name;
+
+        // flexbox($justify-content:center,$align-items:center)
+        @include mixin.flexbox();
+
+        // pra poder setar z-index e posicoes(top, left...)
+        // pro componentes filho
+        position: relative;
+    }
+}
+
+
+
+// adicionar margem(espaco subtraido do grid center)
+// para container(do grid esquerda e direita) encaixar no viewport. 
+$left_side_area: profile;
+$right_side_area: work, contact;
+
+// - para grid do lado esquerdo
+@each $area_name in $left_side_area {
+    ##{$area_name} {
+        margin-right: $center_space_around / 2;
+    }
+}
+
+// - para grid do lado direito
+@each $area_name in $right_side_area {
+    ##{$area_name} {
+        margin-left: $center_space_around / 2;
+    }
+}

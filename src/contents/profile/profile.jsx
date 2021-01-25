@@ -1,13 +1,13 @@
 import React from 'react'
-import './profile.css'
+import './profile.scss'
 
 import LoremIpsum from '../../components/text/genLoremIpsum'
 
 export default props => {
-    const times = 8
+    const times = 8 // for debug
 
     return (
-        <div className="profile-container">
+        <div id="profile-container">
             <LoremIpsum times={times}></LoremIpsum>
         </div>
     )
