@@ -1,27 +1,43 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import translateArea from './translateArea'
-import './translateAreaButton.scss'
 
-const btnClassName = 'translate-area-btn'
+// styled-componennts
+const AreaMovementBtn = styled.button`
+    width: 10rem;
+    padding: 1rem 0rem;
+    text-align: center;
+    font-size: 1.3rem;
 
-export default props => {
-    // atrubuido diretamento no style
-    // para nao precisar criar stylesheel .scss
-    // pra cada componente
-    const btnStyle = {
-        top: `${props.top}`,
-        bottom: `${props.bottom}`,
-        left: `${props.left}`,
-        right: `${props.right}`,
-        transform: `rotate(${props.rotate}deg)`,
+    position: absolute;
+    z-index: 10;
+
+    border: none;
+    background: none;
+
+    &:hover {
+        color: white;
+        transition: color .5s ease;
     }
 
-    return (
-        <div className={btnClassName} style={btnStyle} 
-            // translateArea(gridAreaName)
-            onClick={ () => translateArea(props.area) } 
-            onMouseEnter={props.onMouseEnter} onMouseLeave={props.onMouseLeave}
-        >{props.label}</div>
-    )
-}
+    top:    ${props => `${props.top    || ''}`};
+    bottom: ${props => `${props.bottom || ''}`};
+    left:   ${props => `${props.left   || ''}`};
+    right:  ${props => `${props.right  || ''}`};
+
+    transform: ${props => `rotate(${props.rotate || 0}deg)`};
+`
+
+export default props => (
+    <AreaMovementBtn 
+        top={props.top} bottom={props.bottom}
+        left={props.left} right={props.right}
+        rotate={props.rotate}
+
+        onClick={ () => translateArea(props.area) } 
+        onMouseEnter={props.onMouseEnter} 
+        onMouseLeave={props.onMouseLeave}
+
+    >{props.label}</AreaMovementBtn>
+)
