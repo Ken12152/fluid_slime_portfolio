@@ -10,7 +10,7 @@ import WorkSlime from '../contents/work/workSlime'
 import ContactSlime from '../contents/contact/contactSlime'
 
 /* func */
-import AreaMovement from '../components/button/AreaMovement'
+import areaMovement from '../components/button/areaMovement'
 import { highlightSlime, lowlightSlime } from '../components/slime/highlightSlime'
 
 /* config file */
@@ -20,7 +20,7 @@ import slimeConfig from '../utils/js/slimeConfig'
 
 export default props => {
     const initArea = gridAreaData.home.name // for debug
-    // useEffect(() => AreaMovement(initArea), []) // for debug
+    // useEffect(() => areaMovement(initArea), []) // for debug
 
     return (
         <div id="main">
