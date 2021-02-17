@@ -27,7 +27,7 @@ const Button = styled.button`
     z-index: 10;
 
     border: none;
-    background: none;
+    background-color: transparent;
 
     &:hover {
         color: white;
