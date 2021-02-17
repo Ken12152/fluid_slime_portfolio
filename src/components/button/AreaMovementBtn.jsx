@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import translateArea from './translateArea'
+import AreaMovement from './AreaMovement'
 
 const AreaMovementBtn = props => (
     <Button 
@@ -9,7 +9,7 @@ const AreaMovementBtn = props => (
         left={props.left} right={props.right}
         rotate={props.rotate}
 
-        onClick={ () => translateArea(props.area) } 
+        onClick={ () => AreaMovement(props.area) } 
         onMouseEnter={props.onMouseEnter} 
         onMouseLeave={props.onMouseLeave}
 

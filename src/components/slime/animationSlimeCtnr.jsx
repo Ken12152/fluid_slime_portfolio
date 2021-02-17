@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const defaultAnimationDuration = "8s"
+const defaultAnimationDur= "8s"
 
 const AnimationSlime = props => (
     <SlimeContainer id={props.containerId}>
@@ -14,7 +14,7 @@ const AnimationSlime = props => (
                 <animate 
                     values={props.values}
                     attributeName="d" repeatCount="indefinite" 
-                    dur={props.dur || defaultAnimationDuration} 
+                    dur={props.dur || defaultAnimationDur} 
                 ></animate>
             </path>
         </Slime>
