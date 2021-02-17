@@ -1,6 +1,6 @@
 import React from 'react'
 
-import AnimationSlime from '../../components/slime/animationSlimeCtnr'
+import AnimationSlime from '../../components/slime/AnimationSlimeCtnr'
 
 import slimeConfig from '../../utils/js/slimeConfig'
 import slimeSvgData from '../../utils/slimeSvgData/slime_1'
