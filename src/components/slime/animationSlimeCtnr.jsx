@@ -4,16 +4,41 @@ import styled from 'styled-components'
 const defaultAnimationDur= "8s"
 
 const AnimationSlime = props => (
-    <SlimeContainer id={props.containerId}>
+    <SlimeContainer 
+        id={props.ctnrId} 
+
+        // normal style
+        width={props.width}
+        height={props.height}
+        translate={props.translate}
+
+        // highlight style
+        highlightWidth={props.highlightWidth}
+        highlightHeight={props.highlightHeight}
+        highlightTranslate={props.highlightTranslate}
+        >
         <Slime 
             id={props.slimeId} 
             viewBox={props.viewBox} 
             preserveAspectRatio="none"
-            version="1.1" xmlns="http://www.w3.org/2000/svg">
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1" 
+
+            // normal style
+            color={props.color}
+            opacity={props.opacity}
+            rotate={props.rotate}
+
+            // highlight style
+            highlightColor={props.highlightColor}
+            highlightOpacity={props.highlightOpacity}
+            highlightRotate={props.highlightRotate}
+            >
             <path>
                 <animate 
                     values={props.values}
-                    attributeName="d" repeatCount="indefinite" 
+                    attributeName="d" 
+                    repeatCount="indefinite" 
                     dur={props.dur || defaultAnimationDur} 
                 ></animate>
             </path>
@@ -21,35 +46,61 @@ const AnimationSlime = props => (
     </SlimeContainer>
 )
 
-export default AnimationSlime
 
-
+// styled-components
 const SlimeContainer = styled.div`
-    // possiton: absolute 
-    // para sair do fluxo do flexbox
-    // mas continua funcionando atributo
+    /* Base style */
+    // possiton: absolute para sair do fluxo do flexbox
+    // mas continua funcionando
     // justify-content: center e align-items: center
     position: absolute;
-
-    // pra voltar na posicao inicial
-    // apos desaplicar animacao translate.
-    // na hora de animacao vai ser atribuido classe.
-    // classname esta configurado em 'utils/scss/constant'.
-    // (class = highlight)
-    transform: translate(0, 0);
-    /* constants.$slime_container_moving_duration  */
     transition: transform .7s ease;
+
+
+    /* Custom style */
+    width: ${props => props.width};
+    height: ${props => props.height};
+
+    transform: ${props => `translate(${props.translate || '0, 0'})`};
+
+    &.highlight {
+        width: ${props => props.highlightWidth || ''};
+        height: ${props => props.highlightHeight || ''};
+
+        transform: ${props => (
+            props.highlightTranslate ? 
+            `translate(${props.highlightTranslate})` : ''
+        )};
+    }
 `
+
 const Slime = styled.svg`
+    /* Base style */
     width: 100%;
     height: 100%;
     
-    // position: relative(ou outro fora static)
-    // pra poder setar z-index
     position: relative;
     z-index: -10;
 
-    // all = opcity, fill...
-    /* constants.$slime_highlight_duration  */
+    // all: fill, opacity, transform...
     transition: all .7s ease;
+
+
+    /* Custom style */
+    fill: ${props => props.color};
+    opacity: ${props => props.opacity || ''};
+
+    transform: ${props => `rotate(${props.rotate || '0deg'})`};
+
+    &.highlight {
+        fill: ${props => props.highlightColor || ''};
+        opacity: ${props => props.highlightOpacity || ''};
+
+        transform: ${props => (
+            props.highlightRotate ? 
+            `rotate(${props.highlightRotate})` : ''
+        )};
+    }
 `
+
+export default AnimationSlime

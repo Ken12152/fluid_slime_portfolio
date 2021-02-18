@@ -28,8 +28,6 @@
 
         fill: #e8a2a0;
 
-        // $slime-highlight-class vai ser adicionado
-        // quando deseja comecar animacao
         &.#{constants.$slime_highlight_class} {
             fill: rgb(204, 33, 33);
             opacity: 0.7;

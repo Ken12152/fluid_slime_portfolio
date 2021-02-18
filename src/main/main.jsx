@@ -55,7 +55,7 @@ export default props => {
             </div>
 
             <div id="work">
-                <WorkSlime></WorkSlime>
+                {/* <WorkSlime></WorkSlime> */}
 
                 <AreaMovementButton area={gridAreaData.home.name} label="Back"  
                     top="1vh" left="0rem" width="8rem" rotate="0"
@@ -63,7 +63,7 @@ export default props => {
             </div>
 
             <div id="contact">
-                <ContactSlime></ContactSlime>
+                {/* <ContactSlime></ContactSlime> */}
 
                 <AreaMovementButton area={gridAreaData.home.name} label="Back"  
                     top="1vh" left="0rem" width="8rem" rotate="0"
