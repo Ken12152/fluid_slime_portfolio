@@ -26,6 +26,7 @@ const ProfileSlime = props => (
 
         dur="3s" // animation duration
 
+        // id usado na hora de adcionar class .highlight
         ctnrId={slimeConfig.profile.containerId}
         slimeId={slimeConfig.profile.slimeId} 
 

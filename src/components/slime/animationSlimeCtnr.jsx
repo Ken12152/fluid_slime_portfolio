@@ -58,6 +58,9 @@ const SlimeContainer = styled.div`
 
 
     /* Custom style */
+    // como componente filho <svg> 
+    // possui width: 100% e height: 100%,
+    // o size do container determina o size do slime
     width: ${props => props.width};
     height: ${props => props.height};
 
